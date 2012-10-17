@@ -116,12 +116,12 @@
 		51DB65681612C460009ECB0C /* firstsignin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51DB65671612C460009ECB0C /* firstsignin.txt */; };
 		51DC7ACD1611B4C0006DBC32 /* sumprice.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51DC7ACC1611B4C0006DBC32 /* sumprice.txt */; };
 		51DDFA1F161FC8A700E3443D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 51DDFA1E161FC8A700E3443D /* background.png */; };
-		51DED9E916104BF20094D0C5 /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DED9E816104BF20094D0C5 /* Library.m */; };
 		51E4EC75161ED55300925F81 /* emaillogin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51E4EC74161ED55300925F81 /* emaillogin.txt */; };
 		51E94AAF1619592800401D3C /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E94AAD1619592800401D3C /* IdentifyViewController.m */; };
 		51E94AB01619592800401D3C /* IdentifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E94AAE1619592800401D3C /* IdentifyViewController.xib */; };
 		51E94AB416196E4A00401D3C /* SendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E94AB216196E4A00401D3C /* SendingViewController.m */; };
 		51E94AB516196E4A00401D3C /* SendingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E94AB316196E4A00401D3C /* SendingViewController.xib */; };
+		51F12A92162EC12300109C30 /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F12A90162EC12300109C30 /* Library.m */; };
 		51F94DD6162BE1DB0071BA52 /* SaleViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F94DD5162BE1DB0071BA52 /* SaleViewControllerIpad.xib */; };
 		51F94DDB162BE2230071BA52 /* ChargeViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F94DDA162BE2230071BA52 /* ChargeViewControllerIpad.xib */; };
 		51F94DDD162BE2490071BA52 /* ReceiptViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F94DDC162BE2490071BA52 /* ReceiptViewControllerIpad.xib */; };
@@ -274,12 +274,9 @@
 		51935D68161C156100B00697 /* navigation_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigation_9.png; path = Image/tablenumber/navigation_9.png; sourceTree = "<group>"; };
 		51935D69161C156100B00697 /* navigation_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigation_clear.png; path = Image/tablenumber/navigation_clear.png; sourceTree = "<group>"; };
 		51935D6A161C156100B00697 /* navigation_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigation_dot.png; path = Image/tablenumber/navigation_dot.png; sourceTree = "<group>"; };
-		51DB65641612B3D3009ECB0C /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		51DB65671612C460009ECB0C /* firstsignin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = firstsignin.txt; path = vinacredit/file/firstsignin.txt; sourceTree = "<group>"; };
 		51DC7ACC1611B4C0006DBC32 /* sumprice.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sumprice.txt; path = vinacredit/file/sumprice.txt; sourceTree = "<group>"; };
 		51DDFA1E161FC8A700E3443D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Image/background.png; sourceTree = "<group>"; };
-		51DED9E716104BF20094D0C5 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
-		51DED9E816104BF20094D0C5 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
 		51E4EC74161ED55300925F81 /* emaillogin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = emaillogin.txt; path = vinacredit/file/emaillogin.txt; sourceTree = "<group>"; };
 		51E94AAC1619592800401D3C /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
 		51E94AAD1619592800401D3C /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
@@ -287,6 +284,9 @@
 		51E94AB116196E4A00401D3C /* SendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendingViewController.h; sourceTree = "<group>"; };
 		51E94AB216196E4A00401D3C /* SendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendingViewController.m; sourceTree = "<group>"; };
 		51E94AB316196E4A00401D3C /* SendingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendingViewController.xib; sourceTree = "<group>"; };
+		51F12A8F162EC12300109C30 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Library.h; path = ../../Library.h; sourceTree = "<group>"; };
+		51F12A90162EC12300109C30 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Library.m; path = ../../Library.m; sourceTree = "<group>"; };
+		51F12A91162EC12300109C30 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = ../../Macros.h; sourceTree = "<group>"; };
 		51F94DD5162BE1DB0071BA52 /* SaleViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SaleViewControllerIpad.xib; path = vinacredit/InterfaceIpad/SaleViewControllerIpad.xib; sourceTree = "<group>"; };
 		51F94DDA162BE2230071BA52 /* ChargeViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChargeViewControllerIpad.xib; path = vinacredit/InterfaceIpad/ChargeViewControllerIpad.xib; sourceTree = "<group>"; };
 		51F94DDC162BE2490071BA52 /* ReceiptViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReceiptViewControllerIpad.xib; path = vinacredit/InterfaceIpad/ReceiptViewControllerIpad.xib; sourceTree = "<group>"; };
@@ -713,9 +713,9 @@
 				51935D07161BF0A500B00697 /* FreeformLineDrawer.m */,
 				2834670A161BE3E900772D14 /* MBProgressHUD.h */,
 				2834670B161BE3E900772D14 /* MBProgressHUD.m */,
-				51DED9E716104BF20094D0C5 /* Library.h */,
-				51DED9E816104BF20094D0C5 /* Library.m */,
-				51DB65641612B3D3009ECB0C /* Macros.h */,
+				51F12A8F162EC12300109C30 /* Library.h */,
+				51F12A90162EC12300109C30 /* Library.m */,
+				51F12A91162EC12300109C30 /* Macros.h */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -896,7 +896,6 @@
 				28A55EDB1609B50900015F72 /* CellData.m in Sources */,
 				28A55EDC1609B50900015F72 /* ItemCell.m in Sources */,
 				28A55EDE1609B50900015F72 /* AddCell.m in Sources */,
-				51DED9E916104BF20094D0C5 /* Library.m in Sources */,
 				28D39DE71614369D00FDD0CD /* Cell.m in Sources */,
 				28875C0B16168BE600DE2440 /* ConnectDatabase.m in Sources */,
 				28875C0E16168BFE00DE2440 /* Bill.m in Sources */,
@@ -908,6 +907,7 @@
 				2834670C161BE3E900772D14 /* MBProgressHUD.m in Sources */,
 				280CFB30162BB88A00D50D7D /* SReaderDriver.c in Sources */,
 				280CFB31162BB88A00D50D7D /* SReaderUtility.m in Sources */,
+				51F12A92162EC12300109C30 /* Library.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
