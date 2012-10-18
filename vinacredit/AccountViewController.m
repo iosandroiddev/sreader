@@ -32,7 +32,7 @@
 @synthesize signOut;
 @synthesize accountList;
 
-
+bool bl_testEmail = FALSE;
 -(id)initWithTitle:(NSString *)t image:(UIImage *)i{
     if((self = [super init])){
         self.title = t;
@@ -51,7 +51,8 @@
     [super viewDidLoad];
     Library *lib = [[Library alloc]init];
     NSString *valueEmail = [lib readFile:@"emaillogin"];
-    
+    if(![valueEmail isEqualToString:@""])
+        bl_testEmail = TRUE;
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     username.text = [NSString stringWithFormat:@"%@ %@",acc.lastName,acc.firstName];
@@ -143,13 +144,19 @@
 	
 	switch (indexPath.row) {
         case 0:
-            if(email != nil) {
-            if(BUILD_IPHONE_OR_IPAD)
-                self.saleHistory = [[SaleHistoryViewController alloc] initWithNibName:nil bundle:nil];
-            else
-                self.saleHistory = [[SaleHistoryViewController alloc] initWithNibName:IPAD_HISTORY_XIB bundle:nil];
-            [self.navigationController pushViewController:saleHistory animated:YES];
+            if(bl_testEmail){
+                if(BUILD_IPHONE_OR_IPAD)
+                    self.saleHistory = [[SaleHistoryViewController alloc] initWithNibName:nil bundle:nil];
+                else
+                    self.saleHistory = [[SaleHistoryViewController alloc] initWithNibName:IPAD_HISTORY_XIB bundle:nil];
+                [self.navigationController pushViewController:saleHistory animated:YES];
             }
+            else{
+                UIAlertView *alert;
+                alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You aren't login" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close",nil];
+                [alert show];
+            }
+            
             break;
         case 1:
             if(BUILD_IPHONE_OR_IPAD)
