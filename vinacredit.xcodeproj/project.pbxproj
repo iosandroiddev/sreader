@@ -347,7 +347,6 @@
 				51F94DF0162BE32D0071BA52 /* SupportViewControllerIpad.xib */,
 			);
 			name = "Interface Ipad";
-			path = ..;
 			sourceTree = "<group>";
 		};
 		280D6F6D15DDD16D00B4CB15 = {
@@ -356,6 +355,9 @@
 				28DED3E115FF1D71006417CB /* logo1.png */,
 				28DED3DF15FF1D67006417CB /* logo.png */,
 				280D6F8215DDD16D00B4CB15 /* vinacredit */,
+				280CFB32162BB9F300D50D7D /* Interface Ipad */,
+				5164456C1613F26E0091D1F3 /* FileText */,
+				28E4F5A015DDE11D00E1DCD8 /* Image */,
 				280D6F8315DDD16D00B4CB15 /* Supporting Files */,
 				280D6F7B15DDD16D00B4CB15 /* Frameworks */,
 				280D6F7915DDD16D00B4CB15 /* Products */,
@@ -390,10 +392,7 @@
 		280D6F8215DDD16D00B4CB15 /* vinacredit */ = {
 			isa = PBXGroup;
 			children = (
-				280CFB32162BB9F300D50D7D /* Interface Ipad */,
-				5164456C1613F26E0091D1F3 /* FileText */,
 				51DED9E516104BB60094D0C5 /* Resource */,
-				28E4F5A015DDE11D00E1DCD8 /* Image */,
 				280D6F8B15DDD16D00B4CB15 /* AppDelegate.h */,
 				280D6F8C15DDD16D00B4CB15 /* AppDelegate.m */,
 				280D6F9315DDD17C00B4CB15 /* Welcome */,
@@ -601,6 +600,7 @@
 				51214C99161AD2820052FE06 /* numberTable */,
 			);
 			name = Image;
+			path = vinacredit;
 			sourceTree = "<group>";
 		};
 		28E4F5C415DDF86B00E1DCD8 /* SaleHistory */ = {
@@ -667,7 +667,6 @@
 				51DC7ACC1611B4C0006DBC32 /* sumprice.txt */,
 			);
 			name = FileText;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		51DED9E516104BB60094D0C5 /* Resource */ = {
@@ -677,6 +676,8 @@
 				5190515C16300250007C9129 /* Account.m */,
 				5190515E16300267007C9129 /* ConnectDatabase.h */,
 				5190515F16300267007C9129 /* ConnectDatabase.m */,
+				51935D06161BF0A500B00697 /* FreeformLineDrawer.h */,
+				51935D07161BF0A500B00697 /* FreeformLineDrawer.m */,
 				5190516316300282007C9129 /* MBProgressHUD.h */,
 				5190516416300282007C9129 /* MBProgressHUD.m */,
 				519051661630028C007C9129 /* ParseDate.h */,
@@ -685,8 +686,6 @@
 				5190516916300294007C9129 /* SReaderDriver.c */,
 				512606F0162408F000DB489B /* SReaderUtility.h */,
 				5190516B163002A0007C9129 /* SReaderUtility.m */,
-				51935D06161BF0A500B00697 /* FreeformLineDrawer.h */,
-				51935D07161BF0A500B00697 /* FreeformLineDrawer.m */,
 				28875C0716168BB700DE2440 /* SumBill */,
 				51F12A8F162EC12300109C30 /* Library.h */,
 				51F12A90162EC12300109C30 /* Library.m */,
