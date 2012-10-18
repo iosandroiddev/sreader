@@ -21,11 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *priceDone;
 @property (strong, nonatomic) IBOutlet UILabel *lblSumPaid;
 
-@property (strong, nonatomic) NSString *timeSale;
-@property (strong, nonatomic) NSString *sumItem;
-@property (strong, nonatomic) NSString *sumBill;
-@property (strong, nonatomic) NSString *dateSale;
-@property (strong, nonatomic) NSString *emailSumBill;
+@property (strong, nonatomic)  NSString *valueEmail;
 
 - (IBAction)buttonDone:(id)sender;
 

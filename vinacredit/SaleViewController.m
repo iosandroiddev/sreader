@@ -379,14 +379,15 @@ void checkStatus(OSStatus status)
         if(bTestEmpty)
             return;
     }    
-    if(BUILD_DEVICE)
-        [self getTimeAndPrice];
+//    if(BUILD_DEVICE)
+//        [self getTimeAndPrice];
     
     [lib gotoInterFace:CHARGE pushView:TRUE navigationController:self.navigationController];
 
 //    labelSum.text = @"0";
 //    [self resetValueVariable];
 }
+/*
 - (void)getTimeAndPrice{
     DoneViewController *done = [[DoneViewController alloc] init];
     ParseDate *d = [[ParseDate alloc] init];
@@ -399,7 +400,7 @@ void checkStatus(OSStatus status)
     done.emailSumBill = valueEmail;
     
 }
-
+*/
 - (IBAction)gotoIdentify:(id)sender{
     if(TEST_EMPTY_SALE){
         bool bTestEmpty = FALSE;
@@ -409,8 +410,8 @@ void checkStatus(OSStatus status)
     }    
 
 //    tmpLableSum = @"0";
-    if(BUILD_DEVICE)
-        [self getTimeAndPrice];
+//    if(BUILD_DEVICE)
+//        [self getTimeAndPrice];
     
     [lib gotoInterFace:IDENTIFY pushView:TRUE navigationController:self.navigationController];
 }

@@ -14,6 +14,7 @@
 #import "SumBill.h"
 #import "Bill.h"
 #import "SaleViewController.h"
+#import "ParseDate.h"
 @interface DoneViewController ()
 
 @end
@@ -23,27 +24,14 @@
 @synthesize imageU;
 @synthesize priceDone;
 @synthesize lblSumPaid;
-@synthesize timeSale;
-@synthesize sumBill;
-@synthesize sumItem;
-@synthesize dateSale;
-@synthesize emailSumBill;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize valueEmail;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     Library *lib = [[Library alloc]init];
-    NSString *valueEmail = [lib readFile:@"emaillogin"];
+    valueEmail = [lib readFile:@"emaillogin"];
     
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
@@ -76,13 +64,16 @@
 }
 
 - (IBAction)buttonDone:(id)sender {
+    ParseDate *d = [[ParseDate alloc] init];
     Bill *bill = [[Bill alloc] init];
     SaleViewController *sale = [[SaleViewController alloc]init];
-    bill.timeSale = timeSale;
-    bill.sumItem = sumItem;
-    SumBill *sum = [[SumBill alloc] initWithDateSale:dateSale sumBill:sumBill bill:bill emailSumBill:emailSumBill];
+    bill.timeSale = [d getCurrentTime];
+    bill.sumItem = lblSumPaid.text;
+    bill.dateSale = [d getCurrentDate];
+    bill.emailBill = valueEmail;
+    SumBill *sum = [[SumBill alloc] initWithDateSale:[d getCurrentDate] sumBill:lblSumPaid.text bill:bill emailSumBill:valueEmail];
     if(BUILD_DEVICE)
-        [[ConnectDatabase database] insertBill:sum currentDate:dateSale email:emailSumBill];
+        [[ConnectDatabase database] insertBill:sum currentDate:[d getCurrentDate] email:valueEmail];
     
     Library *lib = [[Library alloc]init];
     [lib gotoInterFace:SALE pushView:FALSE navigationController:self.navigationController];

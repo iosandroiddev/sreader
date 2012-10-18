@@ -32,6 +32,8 @@
 		28875C1516168C2500DE2440 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 28875C1416168C2500DE2440 /* Account.m */; };
 		28875C1716168DB000DE2440 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 28875C1616168DB000DE2440 /* database.sqlite */; };
 		28875C281616946C00DE2440 /* ParseDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28875C271616946C00DE2440 /* ParseDate.m */; };
+		28955588162F9A88007FFC12 /* AddCellIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28955586162F9A88007FFC12 /* AddCellIpad.xib */; };
+		28955589162F9A88007FFC12 /* ItemCellIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28955587162F9A88007FFC12 /* ItemCellIpad.xib */; };
 		28A55ED91609B50900015F72 /* SaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A55ECF1609B50900015F72 /* SaleViewController.m */; };
 		28A55EDA1609B50900015F72 /* SaleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A55ED01609B50900015F72 /* SaleViewController.xib */; };
 		28A55EDB1609B50900015F72 /* CellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A55ED21609B50900015F72 /* CellData.m */; };
@@ -175,6 +177,8 @@
 		28875C1616168DB000DE2440 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		28875C261616946C00DE2440 /* ParseDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseDate.h; sourceTree = "<group>"; };
 		28875C271616946C00DE2440 /* ParseDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseDate.m; sourceTree = "<group>"; };
+		28955586162F9A88007FFC12 /* AddCellIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCellIpad.xib; path = vinacredit/InterfaceIpad/AddCellIpad.xib; sourceTree = "<group>"; };
+		28955587162F9A88007FFC12 /* ItemCellIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCellIpad.xib; path = vinacredit/InterfaceIpad/ItemCellIpad.xib; sourceTree = "<group>"; };
 		28A55ECE1609B50900015F72 /* SaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleViewController.h; sourceTree = "<group>"; };
 		28A55ECF1609B50900015F72 /* SaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleViewController.m; sourceTree = "<group>"; };
 		28A55ED01609B50900015F72 /* SaleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaleViewController.xib; sourceTree = "<group>"; };
@@ -328,6 +332,8 @@
 				5190C582162D42930006D8D0 /* InfoAccountViewControllerIpad.xib */,
 				5190C583162D42930006D8D0 /* SignInViewControllerIpad.xib */,
 				5190C584162D42940006D8D0 /* WrongPassViewControllerIpad.xib */,
+				28955586162F9A88007FFC12 /* AddCellIpad.xib */,
+				28955587162F9A88007FFC12 /* ItemCellIpad.xib */,
 				51F94DD5162BE1DB0071BA52 /* SaleViewControllerIpad.xib */,
 				51F94DDA162BE2230071BA52 /* ChargeViewControllerIpad.xib */,
 				51F94DDC162BE2490071BA52 /* ReceiptViewControllerIpad.xib */,
@@ -866,6 +872,8 @@
 				5190C587162D42940006D8D0 /* SignInViewControllerIpad.xib in Resources */,
 				5190C588162D42940006D8D0 /* WrongPassViewControllerIpad.xib in Resources */,
 				5190C58F162D53640006D8D0 /* backgroundIpad.png in Resources */,
+				28955588162F9A88007FFC12 /* AddCellIpad.xib in Resources */,
+				28955589162F9A88007FFC12 /* ItemCellIpad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
