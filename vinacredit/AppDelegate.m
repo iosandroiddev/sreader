@@ -5,9 +5,9 @@
 //  Created by Vinacredit on 8/17/12.
 //  Copyright (c) 2012 Vinacredit. All rights reserved.
 //
-
-#import "AppDelegate.h"
 #import "WelcomeViewController.h"
+#import "AppDelegate.h"
+#import "Macros.h"
 
 @implementation AppDelegate
 
@@ -19,16 +19,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    WelcomeViewController *welcomeController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:[NSBundle mainBundle]];
-    WelcomeViewController *welcomeControllerIpad = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewControllerIpad" bundle:[NSBundle mainBundle]];
-    
-    if(UI_USER_INTERFACE_IDIOM() ==UIUserInterfaceIdiomPhone){
-        navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeController];
-    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-        navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeControllerIpad];
-    }    
-    
-    
+
+    WelcomeViewController *welcomeController;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        welcomeController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:[NSBundle mainBundle]];
+        BUILD_IPHONE_OR_IPAD = TRUE;
+    }
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        welcomeController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewControllerIpad" bundle:[NSBundle mainBundle]];
+        BUILD_IPHONE_OR_IPAD = FALSE;
+    }        
+    navigationController = [[UINavigationController alloc]initWithRootViewController:welcomeController];
+   
     //=========
     // NSLog(@"window @c",_window);
     navigationController.navigationBar.barStyle = UIBarStyleDefault;
