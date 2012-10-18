@@ -26,6 +26,9 @@
 
     // create a string of current date & time using NSDateFormatter
     date = [formatter stringFromDate:[NSDate date]];
+    if(DEBUG_SCR)
+        NSLog(@"------date :%@",date);
+    date = [date ]
     if(BUILD_IPHONE_OR_IPAD){
         _E = [date substringWithRange:NSMakeRange(0,4)];
         _day = [date substringWithRange:NSMakeRange (5, 2)];
