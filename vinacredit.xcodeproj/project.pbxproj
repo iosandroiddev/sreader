@@ -327,24 +327,24 @@
 		280CFB32162BB9F300D50D7D /* Interface Ipad */ = {
 			isa = PBXGroup;
 			children = (
-				280CFB2C162BAF5A00D50D7D /* WelcomeViewControllerIpad.xib */,
+				51F94DE8162BE2D20071BA52 /* AccountViewControllerIpad.xib */,
+				28955586162F9A88007FFC12 /* AddCellIpad.xib */,
+				51F94DDA162BE2230071BA52 /* ChargeViewControllerIpad.xib */,
+				51F94DEC162BE3040071BA52 /* DetailSaleViewControllerIpad.xib */,
 				5190C581162D42930006D8D0 /* DoneViewControllerIpad.xib */,
 				5190C582162D42930006D8D0 /* InfoAccountViewControllerIpad.xib */,
-				5190C583162D42930006D8D0 /* SignInViewControllerIpad.xib */,
-				5190C584162D42940006D8D0 /* WrongPassViewControllerIpad.xib */,
-				28955586162F9A88007FFC12 /* AddCellIpad.xib */,
 				28955587162F9A88007FFC12 /* ItemCellIpad.xib */,
-				51F94DD5162BE1DB0071BA52 /* SaleViewControllerIpad.xib */,
-				51F94DDA162BE2230071BA52 /* ChargeViewControllerIpad.xib */,
-				51F94DDC162BE2490071BA52 /* ReceiptViewControllerIpad.xib */,
 				51F94DDE162BE2610071BA52 /* IdentifyViewControllerIpad.xib */,
+				51F94DDC162BE2490071BA52 /* ReceiptViewControllerIpad.xib */,
+				51F94DEA162BE2EC0071BA52 /* SaleHistoryViewControllerIpad.xib */,
+				51F94DD5162BE1DB0071BA52 /* SaleViewControllerIpad.xib */,
 				51F94DE2162BE28B0071BA52 /* SignatureViewControllerIpad.xib */,
 				51F94DE4162BE2A20071BA52 /* SendingViewControllerIpad.xib */,
-				51F94DE8162BE2D20071BA52 /* AccountViewControllerIpad.xib */,
-				51F94DEA162BE2EC0071BA52 /* SaleHistoryViewControllerIpad.xib */,
-				51F94DEC162BE3040071BA52 /* DetailSaleViewControllerIpad.xib */,
-				51F94DEE162BE31A0071BA52 /* TaxViewControllerIpad.xib */,
+				5190C583162D42930006D8D0 /* SignInViewControllerIpad.xib */,
 				51F94DF0162BE32D0071BA52 /* SupportViewControllerIpad.xib */,
+				51F94DEE162BE31A0071BA52 /* TaxViewControllerIpad.xib */,
+				280CFB2C162BAF5A00D50D7D /* WelcomeViewControllerIpad.xib */,
+				5190C584162D42940006D8D0 /* WrongPassViewControllerIpad.xib */,
 			);
 			name = "Interface Ipad";
 			sourceTree = "<group>";
@@ -569,34 +569,34 @@
 		28E4F5A015DDE11D00E1DCD8 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				51935D36161C154E00B00697 /* account.png */,
+				51935D37161C154E00B00697 /* add.png */,
+				51DDFA1E161FC8A700E3443D /* background.png */,
 				5190C58E162D53640006D8D0 /* backgroundIpad.png */,
 				5126070016240AF000DB489B /* card lock.jpeg */,
 				5126070116240AF000DB489B /* card unlock.jpeg */,
-				517029251622D3EE00073249 /* change.png */,
-				517029261622D3EE00073249 /* money.png */,
-				517028F71622B89E00073249 /* clear.png */,
-				517EEE5F161FD2AC00A61393 /* email.jpeg */,
-				51DDFA1E161FC8A700E3443D /* background.png */,
-				285ACE8A161EE07700A5FA40 /* plus.png */,
-				51935D36161C154E00B00697 /* account.png */,
-				51935D37161C154E00B00697 /* add.png */,
 				51935D38161C154E00B00697 /* camera.png */,
+				517029251622D3EE00073249 /* change.png */,
 				51935D39161C154E00B00697 /* charge.png */,
+				517028F41622B3ED00073249 /* charge_money.png */,
 				51935D3A161C154E00B00697 /* chomsao.jpeg */,
+				517028F71622B89E00073249 /* clear.png */,
 				51935D3C161C154E00B00697 /* del.png */,
+				517EEE5F161FD2AC00A61393 /* email.jpeg */,
 				51935D3D161C154E00B00697 /* equal.jpeg */,
 				51935D3E161C154E00B00697 /* goback.ico */,
 				51935D3F161C154E00B00697 /* Help Support.png */,
-				51935D40161C154E00B00697 /* logo.ico */,
 				51935D41161C154E00B00697 /* minus.png */,
+				517029261622D3EE00073249 /* money.png */,
 				51935D43161C154E00B00697 /* moneyicon.jpeg */,
+				285ACE8A161EE07700A5FA40 /* plus.png */,
+				51935D40161C154E00B00697 /* logo.ico */,
 				51935D44161C154E00B00697 /* percent.png */,
 				51935D45161C154E00B00697 /* RecycleBin.png */,
 				51935D46161C154E00B00697 /* RedDog.gif */,
 				51935D47161C154E00B00697 /* Sales History.png */,
 				51935D48161C154E00B00697 /* Signature.ico */,
 				51935D49161C154E00B00697 /* Tax.png */,
-				517028F41622B3ED00073249 /* charge_money.png */,
 				51214C99161AD2820052FE06 /* numberTable */,
 			);
 			name = Image;
@@ -661,10 +661,10 @@
 			isa = PBXGroup;
 			children = (
 				51E4EC74161ED55300925F81 /* emaillogin.txt */,
-				51644579161412C40091D1F3 /* taxstatus.txt */,
 				51DB65671612C460009ECB0C /* firstsignin.txt */,
-				5164456E1613F2AD0091D1F3 /* taxrate.txt */,
 				51DC7ACC1611B4C0006DBC32 /* sumprice.txt */,
+				5164456E1613F2AD0091D1F3 /* taxrate.txt */,
+				51644579161412C40091D1F3 /* taxstatus.txt */,
 			);
 			name = FileText;
 			sourceTree = "<group>";
