@@ -132,6 +132,8 @@ void checkStatus(OSStatus status)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier ;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
     if(indexPath.row == [rowDataArray count]){
         CellIdentifier = @"AddCell";
         AddCell *ad = (AddCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -162,6 +164,39 @@ void checkStatus(OSStatus status)
         cus.itemImage.image = da.imageItem;
         cus.itemNum.text = da.numItem;
         return cus;
+    }
+    }else {
+        if(indexPath.row == [rowDataArray count]){
+            CellIdentifier = @"AddCellIpad";
+            AddCell *ad = (AddCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if(ad == nil){
+                ad = (AddCell*)[[[NSBundle mainBundle] loadNibNamed:@"AddCellIpad" owner:self options:nil] lastObject];
+                ad.delegate = self;
+            }
+            ad.adx = indexPath.row;
+            NSLog(@"%d",ad.adx);
+            ad.textItem.text = text;
+            ad.labelItem.text = [lib addDotNumber:value];
+            ad.imageItem.image = ima;
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            return ad;
+        }
+        else{
+            CellIdentifier = @"ItemCellIpad";
+            ItemCell *cus = (ItemCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if(cus == nil){
+                cus = (ItemCell*)[[[NSBundle mainBundle] loadNibNamed:@"ItemCellIpad" owner:self options:nil] lastObject];
+                cus.delegate = self;
+            }
+            CellData *da = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
+            cus.idx = indexPath.row;
+            if(da.textItem !=nil)
+                cus.itemField.text = da.textItem;
+            cus.itemLabel.text = da.labelItem;
+            cus.itemImage.image = da.imageItem;
+            cus.itemNum.text = da.numItem;
+            return cus;
+        }
     }
     
 }

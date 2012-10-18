@@ -22,10 +22,9 @@
 @implementation DoneViewController
 
 @synthesize imageU;
-@synthesize priceDone;
 @synthesize lblSumPaid;
 @synthesize valueEmail;
-
+@synthesize Strprice;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,15 +39,14 @@
         imageU.image = acc.imageAcc;
     
         // get value 
-    lblSumPaid.text = [lib readFile:@"sumprice"];
+    lblSumPaid.text = [lib readFile:@"sumprice"];    
+    Strprice = [lib deleteDotNumber:lblSumPaid.text];
     lblSumPaid.text = [lblSumPaid.text stringByAppendingString:@" VND"];
 }
 
 - (void)viewDidUnload
 {
-    priceDone = nil;
     buttonDone = nil;
-    [self setPriceDone:nil];
     lblSumPaid = nil;
     [self setLblSumPaid:nil];
     imageU = nil;
@@ -68,10 +66,10 @@
     Bill *bill = [[Bill alloc] init];
     SaleViewController *sale = [[SaleViewController alloc]init];
     bill.timeSale = [d getCurrentTime];
-    bill.sumItem = lblSumPaid.text;
+    bill.sumItem = Strprice;
     bill.dateSale = [d getCurrentDate];
     bill.emailBill = valueEmail;
-    SumBill *sum = [[SumBill alloc] initWithDateSale:[d getCurrentDate] sumBill:lblSumPaid.text bill:bill emailSumBill:valueEmail];
+    SumBill *sum = [[SumBill alloc] initWithDateSale:[d getCurrentDate] sumBill:Strprice bill:bill emailSumBill:valueEmail];
     if(BUILD_DEVICE)
         [[ConnectDatabase database] insertBill:sum currentDate:[d getCurrentDate] email:valueEmail];
     

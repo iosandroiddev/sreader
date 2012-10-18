@@ -10,7 +10,7 @@
 
 @interface DoneViewController : UIViewController {
     
-    IBOutlet UILabel *priceDone;
+    
     IBOutlet UIButton *buttonDone;
     IBOutlet UIImageView *imageU;
     IBOutlet UILabel *lblSumPaid;
@@ -18,11 +18,10 @@
     
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imageU;
-@property (strong, nonatomic) IBOutlet UILabel *priceDone;
 @property (strong, nonatomic) IBOutlet UILabel *lblSumPaid;
 
 @property (strong, nonatomic)  NSString *valueEmail;
-
+@property (strong, nonatomic)  NSString *Strprice;
 - (IBAction)buttonDone:(id)sender;
 
 @end
