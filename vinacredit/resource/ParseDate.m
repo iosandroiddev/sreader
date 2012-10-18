@@ -26,26 +26,20 @@
 
     // create a string of current date & time using NSDateFormatter
     date = [formatter stringFromDate:[NSDate date]];
-    if(DEBUG_SCR)
-        NSLog(@"------date :%@",date);
-    date = [date ]
-    if(BUILD_IPHONE_OR_IPAD){
-        _E = [date substringWithRange:NSMakeRange(0,4)];
-        _day = [date substringWithRange:NSMakeRange (5, 2)];
-        _month = [date substringWithRange:NSMakeRange (8, 2)];
-        _year = [date substringWithRange:NSMakeRange (11, 4)];
-        _hour = [date substringWithRange:NSMakeRange (16, 2)];
-        _minute = [date substringWithRange:NSMakeRange (19, 2)];        
+    if(DEBUG_SCR)NSLog(@"------date :%@",date);
+    date = [date stringByReplacingOccurrencesOfString:@"," withString:@""];
+    date = [date stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    date = [date stringByReplacingOccurrencesOfString:@" " withString:@""];
+    date = [date stringByReplacingOccurrencesOfString:@":" withString:@""];
+    if(DEBUG_SCR)NSLog(@"------date :%@",date);
+    
+    _E = [date substringWithRange:NSMakeRange(0,3)];
+    _day = [date substringWithRange:NSMakeRange (3, 2)];
+    _month = [date substringWithRange:NSMakeRange (5, 2)];
+    _year = [date substringWithRange:NSMakeRange (7, 4)];
+    _hour = [date substringWithRange:NSMakeRange (11, 2)];
+    _minute = [date substringWithRange:NSMakeRange (13, 2)];
 
-    }    
-    else{
-        _E = [date substringWithRange:NSMakeRange(0,3)];
-        _day = [date substringWithRange:NSMakeRange (4, 2)];
-        _month = [date substringWithRange:NSMakeRange (7, 2)];
-        _year = [date substringWithRange:NSMakeRange (10, 4)];
-        _hour = [date substringWithRange:NSMakeRange (15, 2)];
-        _minute = [date substringWithRange:NSMakeRange (18, 2)];
-    }
 }
 -(NSString *)getCurrentDate{
     [self parseDate];

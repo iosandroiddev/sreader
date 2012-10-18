@@ -70,8 +70,8 @@
     bill.dateSale = [d getCurrentDate];
     bill.emailBill = valueEmail;
     SumBill *sum = [[SumBill alloc] initWithDateSale:[d getCurrentDate] sumBill:Strprice bill:bill emailSumBill:valueEmail];
-    if(BUILD_DEVICE)
-        [[ConnectDatabase database] insertBill:sum currentDate:[d getCurrentDate] email:valueEmail];
+  
+    [[ConnectDatabase database] insertBill:sum currentDate:[d getCurrentDate] email:valueEmail];
     
     Library *lib = [[Library alloc]init];
     [lib gotoInterFace:SALE pushView:FALSE navigationController:self.navigationController];
