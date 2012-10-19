@@ -20,6 +20,6 @@
 @property (nonatomic, strong) DetailSaleViewController *details;
 @property (strong, nonatomic) IBOutlet UITableView *mainTableView;
 
--(IBAction) gotoAccountView:(id)sender;
+//-(IBAction) gotoAccountView:(id)sender;
 
 @end

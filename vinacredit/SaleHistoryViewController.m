@@ -29,7 +29,8 @@
     if(acc.imageAcc != NULL)
         imageU.image = acc.imageAcc;
     self.itemInfos = [[ConnectDatabase database] sumBill:valueEmail];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    self.title = @"Sale History";
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -107,8 +108,8 @@
     
 }
 
--(IBAction) gotoAccountView:(id)sender {
-    Library *lib = [[Library alloc]init];
-    [lib gotoInterFace:ACCOUNT pushView:FALSE navigationController:self.navigationController];    
-}
+//-(IBAction) gotoAccountView:(id)sender {
+//    Library *lib = [[Library alloc]init];
+//    [lib gotoInterFace:ACCOUNT pushView:FALSE navigationController:self.navigationController];    
+//}
 @end
