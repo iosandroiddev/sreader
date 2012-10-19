@@ -29,7 +29,6 @@
     self.view.transform = CGAffineTransformMakeRotation(90*M_PI/180);
     self.drawImage.transform = CGAffineTransformMakeRotation(180*M_PI/180);
 
-    Library *lib = [[Library alloc]init];
     priceLabel.text = SALE_SUM_VALUE;
     priceLabel.text = [priceLabel.text stringByAppendingString:@" VND"];
     

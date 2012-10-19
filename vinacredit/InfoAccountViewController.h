@@ -41,7 +41,6 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
-- (IBAction)gotoWelcome:(id)sender;
 - (IBAction)gotoSale:(id)sender;
 - (IBAction)btnIma:(id)sender;
 

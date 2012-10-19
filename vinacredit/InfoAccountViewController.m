@@ -48,7 +48,8 @@
 	
 	// Get the size of the keyboard.
 	NSDictionary* info = [notif userInfo];
-	NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
+
+	NSValue* aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
 	CGSize keyboardSize = [aValue CGRectValue].size;
 	
 	// Save the current location so we can restore
