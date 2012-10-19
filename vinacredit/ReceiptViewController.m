@@ -59,8 +59,47 @@
         lbltestEmail.textColor = [UIColor redColor];
         return;
     }
+    [self sendMail:emailUser.text];
+        //[lib gotoInterFace:DONE pushView:TRUE navigationController:self.navigationController];
+}
+    //send mail
+- (BOOL)sendMail:(NSString *)email{
+    if ([MFMailComposeViewController canSendMail]){
+        MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
+        
+        mailer.mailComposeDelegate = self;
+        
+        NSString *strSubject = @"Receipt : ";        
+        strSubject = [strSubject stringByAppendingString:SALE_SUM_VALUE];
+        strSubject = [strSubject stringByAppendingString:@"VND"];
+        [mailer setSubject:strSubject];
+        
+        NSArray *toRecipients = [NSArray arrayWithObjects:email, nil];
+        [mailer setToRecipients:toRecipients];
+        
+            //UIImage *myImage = [UIImage imageNamed:@"mobiletuts-logo.png"];
+        UIImage *myImage = IMG_SIGNATURE;
+        NSData *imageData = UIImagePNGRepresentation(myImage);
+        [mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
+        
+            //NSString *emailBody = emailUser.text;
+        NSString *emailBody = @"Thank you very much.";
+        [mailer setMessageBody:emailBody isHTML:NO];
+        
+            // only for iPad
+            // mailer.modalPresentationStyle = UIModalPresentationPageSheet;
+        
+        [self presentModalViewController:mailer animated:YES];
+        return TRUE;
+    }
     
-    [lib gotoInterFace:DONE pushView:TRUE navigationController:self.navigationController];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                    message:@"Your device doesn't support the composer sheet"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles: nil];
+    [alert show];
+    return FALSE;
 }
 
 @end

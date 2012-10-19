@@ -48,7 +48,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     
-    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+    return NO;
 }
 
 - (IBAction)save:(id)sender {
@@ -75,9 +75,10 @@
         CGContextRef theContext = UIGraphicsGetCurrentContext();
         [self.drawImage.layer renderInContext:theContext];
         
-        UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+        IMG_SIGNATURE = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+        
+        UIImageWriteToSavedPhotosAlbum(IMG_SIGNATURE, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
      }
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{

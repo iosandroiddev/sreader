@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ReceiptViewController : UIViewController {
+#import <MessageUI/MessageUI.h>
+@interface ReceiptViewController : UIViewController <MFMailComposeViewControllerDelegate>{
     
     IBOutlet UITextField *emailUser;
     IBOutlet UIButton *buttonSkip;
