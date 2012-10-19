@@ -49,9 +49,8 @@ bool bl_testEmail = FALSE;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    NSString *valueEmail = [lib readFile:@"emaillogin"];
+    [super viewDidLoad];    
+    NSString *valueEmail = EMAIL_LOGIN_VALUE;
     if(![valueEmail isEqualToString:@""])
         bl_testEmail = TRUE;
     Account *acc = [[Account alloc] init];

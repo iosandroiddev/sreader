@@ -30,7 +30,7 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     Library *lib = [[Library alloc]init];
-    valueEmail = [lib readFile:@"emaillogin"];
+    valueEmail = EMAIL_LOGIN_VALUE;
     
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];

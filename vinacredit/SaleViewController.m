@@ -71,7 +71,7 @@ void checkStatus(OSStatus status)
 {
     celldata = [[CellData alloc] init];
     lib = [[Library alloc]init];
-    valueEmail = [lib readFile:@"emaillogin"];
+    valueEmail = EMAIL_LOGIN_VALUE;
     [self sreaderViewDidLoad];
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];

@@ -23,8 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    NSString *valueEmail = [lib readFile:@"emaillogin"];
+    NSString *valueEmail = EMAIL_LOGIN_VALUE;
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     if(acc.imageAcc != NULL)

@@ -153,9 +153,7 @@ bool flagFirstLogin = true;
 
 }
 - (IBAction)gotoSale:(id)sender {
-    Library *lib = [[Library alloc]init];
-    bool blEmailLogin = [lib writeFile:@"emaillogin" contentFile:emailAddress.text];
-    if(!blEmailLogin)NSLog(@"create email login failure");
+    EMAIL_LOGIN_VALUE = emailAddress.text;
     
     [emailAddress resignFirstResponder];
     [password resignFirstResponder];

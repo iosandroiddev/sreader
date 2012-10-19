@@ -47,6 +47,7 @@
     TAX_RATE_VALUE      = @"0 %";
     TAX_STATUS_VALUE    = TRUE;
     SALE_SUM_VALUE      = @"0";
+    EMAIL_LOGIN_VALUE   = @"";
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

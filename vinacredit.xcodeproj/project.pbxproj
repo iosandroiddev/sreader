@@ -116,7 +116,6 @@
 		51935D77161C156100B00697 /* navigation_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 51935D6A161C156100B00697 /* navigation_dot.png */; };
 		51DB65681612C460009ECB0C /* firstsignin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51DB65671612C460009ECB0C /* firstsignin.txt */; };
 		51DDFA1F161FC8A700E3443D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 51DDFA1E161FC8A700E3443D /* background.png */; };
-		51E4EC75161ED55300925F81 /* emaillogin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51E4EC74161ED55300925F81 /* emaillogin.txt */; };
 		51E94AAF1619592800401D3C /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E94AAD1619592800401D3C /* IdentifyViewController.m */; };
 		51E94AB01619592800401D3C /* IdentifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E94AAE1619592800401D3C /* IdentifyViewController.xib */; };
 		51E94AB416196E4A00401D3C /* SendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E94AB216196E4A00401D3C /* SendingViewController.m */; };
@@ -277,7 +276,6 @@
 		51935D6A161C156100B00697 /* navigation_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigation_dot.png; path = Image/tablenumber/navigation_dot.png; sourceTree = "<group>"; };
 		51DB65671612C460009ECB0C /* firstsignin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = firstsignin.txt; path = vinacredit/file/firstsignin.txt; sourceTree = "<group>"; };
 		51DDFA1E161FC8A700E3443D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Image/background.png; sourceTree = "<group>"; };
-		51E4EC74161ED55300925F81 /* emaillogin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = emaillogin.txt; path = vinacredit/file/emaillogin.txt; sourceTree = "<group>"; };
 		51E94AAC1619592800401D3C /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
 		51E94AAD1619592800401D3C /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
 		51E94AAE1619592800401D3C /* IdentifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdentifyViewController.xib; sourceTree = "<group>"; };
@@ -658,7 +656,6 @@
 		5164456C1613F26E0091D1F3 /* FileText */ = {
 			isa = PBXGroup;
 			children = (
-				51E4EC74161ED55300925F81 /* emaillogin.txt */,
 				51DB65671612C460009ECB0C /* firstsignin.txt */,
 			);
 			name = FileText;
@@ -804,7 +801,6 @@
 				51935D75161C156100B00697 /* navigation_9.png in Resources */,
 				51935D76161C156100B00697 /* navigation_clear.png in Resources */,
 				51935D77161C156100B00697 /* navigation_dot.png in Resources */,
-				51E4EC75161ED55300925F81 /* emaillogin.txt in Resources */,
 				285ACE8B161EE07700A5FA40 /* plus.png in Resources */,
 				51DDFA1F161FC8A700E3443D /* background.png in Resources */,
 				517EEE60161FD2AC00A61393 /* email.jpeg in Resources */,
