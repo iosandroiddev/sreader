@@ -43,6 +43,7 @@ SaleViewController* THIS = NULL;
 @synthesize isNumber;
 @synthesize rowDataArray;
 @synthesize lib;
+@synthesize celldata;
 bool flagLableSum = TRUE;
 NSString *tmpLableSum;
 NSString *tmpLableItem;
@@ -68,6 +69,7 @@ void checkStatus(OSStatus status)
 
 - (void)viewDidLoad
 {
+    celldata = [[CellData alloc] init];
     lib = [[Library alloc]init];
     valueEmail = [lib readFile:@"emaillogin"];
     [self sreaderViewDidLoad];
@@ -156,13 +158,13 @@ void checkStatus(OSStatus status)
             cus = (ItemCell*)[[[NSBundle mainBundle] loadNibNamed:@"ItemCell" owner:self options:nil] lastObject];
             cus.delegate = self;
         }
-        CellData *da = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
+        celldata = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
         cus.idx = indexPath.row;
-        if(da.textItem !=nil)
-            cus.itemField.text = da.textItem;
-        cus.itemLabel.text = da.labelItem;
-        cus.itemImage.image = da.imageItem;
-        cus.itemNum.text = da.numItem;
+        if(celldata.textItem !=nil)
+            cus.itemField.text = celldata.textItem;
+        cus.itemLabel.text = celldata.labelItem;
+        cus.itemImage.image = celldata.imageItem;
+        cus.itemNum.text = celldata.numItem;
         return cus;
     }
     }else {
@@ -188,13 +190,13 @@ void checkStatus(OSStatus status)
                 cus = (ItemCell*)[[[NSBundle mainBundle] loadNibNamed:@"ItemCellIpad" owner:self options:nil] lastObject];
                 cus.delegate = self;
             }
-            CellData *da = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
+            celldata = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
             cus.idx = indexPath.row;
-            if(da.textItem !=nil)
-                cus.itemField.text = da.textItem;
-            cus.itemLabel.text = da.labelItem;
-            cus.itemImage.image = da.imageItem;
-            cus.itemNum.text = da.numItem;
+            if(celldata.textItem !=nil)
+                cus.itemField.text = celldata.textItem;
+            cus.itemLabel.text = celldata.labelItem;
+            cus.itemImage.image = celldata.imageItem;
+            cus.itemNum.text = celldata.numItem;
             return cus;
         }
     }
@@ -311,9 +313,8 @@ void checkStatus(OSStatus status)
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    CellData *ob = [[CellData alloc] init];
     ima = [info objectForKey:UIImagePickerControllerEditedImage];
-    ob.imageItem = ima;
+    celldata.imageItem = ima;
     [picker dismissModalViewControllerAnimated:YES];
     NSLog(@"test image picker");
     [self.tableView reloadData];
@@ -326,13 +327,12 @@ void checkStatus(OSStatus status)
     if([value intValue] % 100 !=0)return;
     
     NSLog(@"test add cell");
-    CellData *ob = [[CellData alloc] init];
-    [rowDataArray addObject:ob];
-    ob.textItem = text ;
-    NSLog(@"test add : %@",ob.textItem);
+    [rowDataArray addObject:celldata];
+    celldata.textItem = text ;
+    NSLog(@"test add : %@",celldata.textItem);
     text = nil;
         //=====enter price item======
-    ob.labelItem = [lib addDotNumber:value];
+    celldata.labelItem = [lib addDotNumber:value];
     tmpLableItem = value;
     value = @"0";
     tmpStrValue = @"0";
@@ -350,7 +350,7 @@ void checkStatus(OSStatus status)
     NSLog(@"tmpLableSum : %@",tmpLableSum);
     
         //=====add image item========
-    ob.imageItem = ima;
+    celldata.imageItem = ima;
     ima = [UIImage imageNamed:@"logo.png"];
     
     [self.tableView reloadData];
@@ -359,52 +359,52 @@ void checkStatus(OSStatus status)
 -(void)customized1CellDidMinus:(ItemCell *)customized1Cell{
     
     NSLog(@"test minus item");
-    CellData *ob = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
-    ob.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
-    int a = [ob.numItem intValue];
+    celldata = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
+    celldata.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
+    int a = [celldata.numItem intValue];
     a--;
     if(a < 1){
-        [rowDataArray removeObject:ob];
+        [rowDataArray removeObject:celldata];
     }
     else
         {
-        ob.numItem = [NSString stringWithFormat:@"%ix",a];
+        celldata.numItem = [NSString stringWithFormat:@"%ix",a];
         }
     if (flagLableSum){
         tmpLableSum = labelSum.text;
         flagLableSum = FALSE;
     }
-    tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] - [ob.labelItem intValue]];
+    tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] - [celldata.labelItem intValue]];
     labelSum.text = [lib addDotNumber:tmpLableSum];
     [lib writeFile:@"sumprice" contentFile:labelSum.text];
-    ob.labelItem = [lib addDotNumber:ob.labelItem];
+    celldata.labelItem = [lib addDotNumber:celldata.labelItem];
     [self.tableView reloadData];
 }
 -(void)customized1CellDidPlus:(ItemCell *)customized1Cell{
     
     NSLog(@"test plus item");
-    CellData *ob = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
-    ob.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
-    int a = [ob.numItem intValue];
+    celldata = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
+    celldata.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
+    int a = [celldata.numItem intValue];
     a++;
-    ob.numItem = [NSString stringWithFormat:@"%ix",a];
+    celldata.numItem = [NSString stringWithFormat:@"%ix",a];
     
     if (flagLableSum){
         tmpLableSum = labelSum.text;
         flagLableSum = FALSE;
     }
-    tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] + [ob.labelItem intValue]];
+    tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] + [celldata.labelItem intValue]];
     labelSum.text = [lib addDotNumber:tmpLableSum];
     [lib writeFile:@"sumprice" contentFile:labelSum.text];
-    ob.labelItem = [lib addDotNumber:ob.labelItem];
+    celldata.labelItem = [lib addDotNumber:celldata.labelItem];
     [self.tableView reloadData];
 }
 
 - (IBAction)gotoAccount:(id)sender{
-    [lib gotoInterFace:ACCOUNT pushView:FALSE navigationController:self.navigationController];
+    [lib gotoInterFace:ACCOUNT pushView:TRUE navigationController:self.navigationController];
 
-    labelSum.text = @"0";
-    [self resetValueVariable];
+//    labelSum.text = @"0";
+//    [self resetValueVariable];
 }
 
 - (IBAction)gotoCharge:(id)sender{

@@ -41,6 +41,7 @@ bool bl_testEmail = FALSE;
     return self;
 }
 
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.tableView reloadData];
@@ -72,8 +73,9 @@ bool bl_testEmail = FALSE;
 	self.navigationItem.rightBarButtonItem = addButtonItem;
     
     //create an add left button
-    UIBarButtonItem *addleftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(gotoSaleView:)];
-    self.navigationItem.leftBarButtonItem = addleftButton;
+    UIBarButtonItem *btnbackBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(gotoSaleView:)];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = btnbackBar;
 	
 	self.navigationController.delegate = self;
      
@@ -176,8 +178,7 @@ bool bl_testEmail = FALSE;
 }
 
 -(void) gotoSaleView:(id)sender {
-    Library *lib = [[Library alloc]init];
-    [lib gotoInterFace:SALE pushView:TRUE navigationController:self.navigationController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)gotoSignOut:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Sign Out"
