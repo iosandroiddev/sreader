@@ -13,7 +13,6 @@
     NSString *date;
     NSString *email;
     IBOutlet UIImageView *image;
-    IBOutlet UILabel *label;
     IBOutlet UILabel *totalLabel;
     IBOutlet UITableView *mainTableView;
     NSString *total;
@@ -27,5 +26,5 @@
 
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSString *email;
--(IBAction) gotoHistoryView:(id)sender;
+//-(IBAction) gotoHistoryView:(id)sender;
 @end

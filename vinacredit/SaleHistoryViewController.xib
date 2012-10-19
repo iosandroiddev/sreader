@@ -71,7 +71,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="598696765">
+					<object class="IBUIImageView" id="276059882">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{110, 7}, {100, 90}}</string>
@@ -82,7 +82,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUITableView" id="530022699">
+					<object class="IBUITableView" id="8226916">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 111}, {320, 349}}</string>
@@ -107,10 +107,10 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="598696765"/>
+				<reference key="NSNextKeyView" ref="276059882"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MSAxIDEAA</bytes>
+					<bytes key="NSRGB">MC45Njg2Mjc0NTEgMC45Njg2Mjc0NTEgMC45Njg2Mjc0NTEAA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -130,7 +130,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">mainTableView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="530022699"/>
+						<reference key="destination" ref="8226916"/>
 					</object>
 					<int key="connectionID">29</int>
 				</object>
@@ -138,14 +138,14 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">imageU</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="598696765"/>
+						<reference key="destination" ref="276059882"/>
 					</object>
 					<int key="connectionID">30</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
-						<reference key="source" ref="530022699"/>
+						<reference key="source" ref="8226916"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">31</int>
@@ -153,7 +153,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="530022699"/>
+						<reference key="source" ref="8226916"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">32</int>
@@ -172,8 +172,8 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="160905812"/>
-							<reference ref="598696765"/>
-							<reference ref="530022699"/>
+							<reference ref="276059882"/>
+							<reference ref="8226916"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -195,12 +195,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
-						<reference key="object" ref="598696765"/>
+						<reference key="object" ref="276059882"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
-						<reference key="object" ref="530022699"/>
+						<reference key="object" ref="8226916"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -226,17 +226,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SaleHistoryViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">gotoAccountView:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">gotoAccountView:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">gotoAccountView:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="imageU">UIImageView</string>
 						<string key="mainTableView">UITableView</string>

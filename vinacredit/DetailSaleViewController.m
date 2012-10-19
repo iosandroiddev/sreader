@@ -28,27 +28,28 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:NO];
     self.detail = [[ConnectDatabase database] bills:date email:email];
-
+    Library *lib = [[Library alloc]init];
+    [_totalLabel setText:[lib addDotNumber:total]];
     [self.mainTableView reloadData];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
+    
     NSString *valueEmail = EMAIL_LOGIN_VALUE;
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     if(acc.imageAcc != NULL)
         _image.image = acc.imageAcc;
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [_totalLabel setText:[lib addDotNumber:total]];
+    self.title = @"Detail Sale";
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
     image = nil;
-    label = nil;
     totalLabel = nil;
     [self setImage:nil];
     [self setTotalLabel:nil];
@@ -64,10 +65,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(IBAction) gotoHistoryView:(id)sender {
-    Library *lib = [[Library alloc]init];
-    [lib gotoInterFace:HISTORY pushView:FALSE navigationController:self.navigationController];
-}
+//-(IBAction) gotoHistoryView:(id)sender {
+//    Library *lib = [[Library alloc]init];
+//    [lib gotoInterFace:HISTORY pushView:FALSE navigationController:self.navigationController];
+//}
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
