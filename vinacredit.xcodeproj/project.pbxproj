@@ -56,6 +56,7 @@
 		28E66C00160069E30048D37F /* TaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E66BFE160069E30048D37F /* TaxViewController.m */; };
 		28E66C01160069E30048D37F /* TaxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E66BFF160069E30048D37F /* TaxViewController.xib */; };
 		510B37A016315E6A00EB9CAC /* CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */; };
+		510B37A41631640700EB9CAC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510B37A2163163F900EB9CAC /* AssetsLibrary.framework */; };
 		512606FC162409BF00DB489B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606FA1624097E00DB489B /* CoreData.framework */; };
 		512606FD162409BF00DB489B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606F81624096900DB489B /* AudioToolbox.framework */; };
 		512606FE162409BF00DB489B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606F61624095D00DB489B /* CoreAudio.framework */; };
@@ -208,6 +209,7 @@
 		28E66BFF160069E30048D37F /* TaxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxViewController.xib; sourceTree = "<group>"; };
 		510B379E16315E6A00EB9CAC /* CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPhotoAlbum.h; path = resource/CustomPhotoAlbum.h; sourceTree = "<group>"; };
 		510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPhotoAlbum.m; path = resource/CustomPhotoAlbum.m; sourceTree = "<group>"; };
+		510B37A2163163F900EB9CAC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		512606EF162408F000DB489B /* SReaderDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SReaderDriver.h; path = resource/SReaderDriver.h; sourceTree = "<group>"; };
 		512606F0162408F000DB489B /* SReaderUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SReaderUtility.h; path = resource/SReaderUtility.h; sourceTree = "<group>"; };
 		512606F41624094900DB489B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -306,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510B37A41631640700EB9CAC /* AssetsLibrary.framework in Frameworks */,
 				5190517416301252007C9129 /* MessageUI.framework in Frameworks */,
 				51935D0F161BF10600B00697 /* QuartzCore.framework in Frameworks */,
 				28BB3F5D1613F6370033732B /* libsqlite3.dylib in Frameworks */,
@@ -373,6 +376,7 @@
 		280D6F7B15DDD16D00B4CB15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				510B37A2163163F900EB9CAC /* AssetsLibrary.framework */,
 				512606F81624096900DB489B /* AudioToolbox.framework */,
 				5190517316301252007C9129 /* MessageUI.framework */,
 				512606FA1624097E00DB489B /* CoreData.framework */,
