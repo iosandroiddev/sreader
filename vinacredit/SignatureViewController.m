@@ -7,13 +7,14 @@
 //
 
 #import "SignatureViewController.h"
+#import "CustomPhotoAlbum.h"
 #import "Library.h"
 #import "Macros.h"
 
 
 @implementation SignatureViewController
 
-
+@synthesize library;
 @synthesize drawImage;
 @synthesize priceLabel;
 
@@ -28,7 +29,9 @@
     opacity = 1.0;
     self.view.transform = CGAffineTransformMakeRotation(90*M_PI/180);
     self.drawImage.transform = CGAffineTransformMakeRotation(180*M_PI/180);
-
+    
+    self.library = [[ALAssetsLibrary alloc] init];
+    
     priceLabel.text = SALE_SUM_VALUE;
     priceLabel.text = [priceLabel.text stringByAppendingString:@" VND"];
     
@@ -40,7 +43,7 @@
 - (void)viewDidUnload{
     [self setDrawImage:nil];
     [self setPriceLabel:nil];
-    
+    self.library = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -71,6 +74,8 @@
         UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
       */
         
+        
+        
         UIGraphicsBeginImageContext(self.drawImage.frame.size);
         CGContextRef theContext = UIGraphicsGetCurrentContext();
         [self.drawImage.layer renderInContext:theContext];
@@ -78,7 +83,13 @@
         IMG_SIGNATURE = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
-        UIImageWriteToSavedPhotosAlbum(IMG_SIGNATURE, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+        //UIImageWriteToSavedPhotosAlbum(IMG_SIGNATURE, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+        [self.library saveImage:IMG_SIGNATURE toAlbum:@"Vinacredit" withCompletionBlock:^(NSError *error) {
+            if (error!=nil) {
+                NSLog(@"Big error: %@", [error description]);
+            }
+        }];
+
      }
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{

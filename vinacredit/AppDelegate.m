@@ -49,6 +49,7 @@
     SALE_SUM_VALUE      = @"0";
     EMAIL_LOGIN_VALUE   = @"";
     IMG_SIGNATURE       = nil;
+    IMG_IDENTIFY        = nil;
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

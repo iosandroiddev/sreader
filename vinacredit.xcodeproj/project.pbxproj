@@ -55,6 +55,7 @@
 		28E4F5F615DE218C00E1DCD8 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E4F5F415DE218C00E1DCD8 /* AccountViewController.xib */; };
 		28E66C00160069E30048D37F /* TaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E66BFE160069E30048D37F /* TaxViewController.m */; };
 		28E66C01160069E30048D37F /* TaxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E66BFF160069E30048D37F /* TaxViewController.xib */; };
+		510B37A016315E6A00EB9CAC /* CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */; };
 		512606FC162409BF00DB489B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606FA1624097E00DB489B /* CoreData.framework */; };
 		512606FD162409BF00DB489B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606F81624096900DB489B /* AudioToolbox.framework */; };
 		512606FE162409BF00DB489B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606F61624095D00DB489B /* CoreAudio.framework */; };
@@ -205,6 +206,8 @@
 		28E66BFD160069E30048D37F /* TaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxViewController.h; sourceTree = "<group>"; };
 		28E66BFE160069E30048D37F /* TaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxViewController.m; sourceTree = "<group>"; };
 		28E66BFF160069E30048D37F /* TaxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxViewController.xib; sourceTree = "<group>"; };
+		510B379E16315E6A00EB9CAC /* CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPhotoAlbum.h; path = resource/CustomPhotoAlbum.h; sourceTree = "<group>"; };
+		510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPhotoAlbum.m; path = resource/CustomPhotoAlbum.m; sourceTree = "<group>"; };
 		512606EF162408F000DB489B /* SReaderDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SReaderDriver.h; path = resource/SReaderDriver.h; sourceTree = "<group>"; };
 		512606F0162408F000DB489B /* SReaderUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SReaderUtility.h; path = resource/SReaderUtility.h; sourceTree = "<group>"; };
 		512606F41624094900DB489B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -668,6 +671,8 @@
 				5190515C16300250007C9129 /* Account.m */,
 				5190515E16300267007C9129 /* ConnectDatabase.h */,
 				5190515F16300267007C9129 /* ConnectDatabase.m */,
+				510B379E16315E6A00EB9CAC /* CustomPhotoAlbum.h */,
+				510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */,
 				51935D06161BF0A500B00697 /* FreeformLineDrawer.h */,
 				51935D07161BF0A500B00697 /* FreeformLineDrawer.m */,
 				5190516316300282007C9129 /* MBProgressHUD.h */,
@@ -872,6 +877,7 @@
 				519051681630028C007C9129 /* ParseDate.m in Sources */,
 				5190516A16300294007C9129 /* SReaderDriver.c in Sources */,
 				5190516C163002A0007C9129 /* SReaderUtility.m in Sources */,
+				510B37A016315E6A00EB9CAC /* CustomPhotoAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

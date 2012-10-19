@@ -7,11 +7,13 @@
 //
 
 #import "IdentifyViewController.h"
+#import "CustomPhotoAlbum.h"
 #import "Library.h"
 #import "Macros.h"
 @implementation IdentifyViewController
 @synthesize img;
-
+@synthesize lblPictureIdentify;
+@synthesize library;
 - (void)viewDidLoad
 {
     
@@ -26,9 +28,9 @@
     self.navigationItem.leftBarButtonItem = btnbackBar;
     
     //==========================
-    
-    if(BUILD_IPHONE_OR_IPAD)
-        [self imageIdentify];
+    self.library = [[ALAssetsLibrary alloc] init];
+        //if(BUILD_IPHONE_OR_IPAD)
+        // [self imageIdentify];
         //img.image = [UIImage imageNamed:@"chomsao.jpeg"];
         //    img.image = tmpImg;
     [super viewDidLoad];
@@ -39,6 +41,9 @@
 {
     img = nil;
     [self setImg:nil];
+    self.library = nil;
+    lblPictureIdentify = nil;
+    [self setLblPictureIdentify:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -82,13 +87,13 @@
         
         }
 }
-
+/*
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     img.image = [info objectForKey:UIImagePickerControllerEditedImage];
     [picker dismissModalViewControllerAnimated:YES];
         //NSLog(@"test image picker");        
 }
-
+*/
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -99,6 +104,41 @@
 }
 - (void)pushBackButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)takePhoto:(id)sender {
+    if(!BUILD_DEVICE){// build simulator
+        UIAlertView *alert;
+        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Only use device"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+        return;
+    }
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+	imagePickerController.editing = YES;
+    imagePickerController.delegate = (id)self;
+    
+    [self presentModalViewController:imagePickerController animated:YES];
+}
+#pragma -
+#pragma mark Image picker delegate methdos
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    IMG_IDENTIFY = image;
+    [self.library saveImage:image toAlbum:@"Vinacredit" withCompletionBlock:^(NSError *error) {
+        if (error!=nil) {
+            NSLog(@"Big error: %@", [error description]);
+        }
+    }];
+    img.image = IMG_IDENTIFY;
+        if(img.image != nil)
+    self.lblPictureIdentify.text = @"";
+    [picker dismissModalViewControllerAnimated:NO];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissModalViewControllerAnimated:NO];
 }
 
 @end

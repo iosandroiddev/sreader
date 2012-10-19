@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Resource/FreeformLineDrawer.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <QuartzCore/QuartzCore.h>
 #import "MBProgressHUD.h"
 @interface SignatureViewController : UIViewController <UIActionSheetDelegate, MBProgressHUDDelegate>{
@@ -27,6 +28,7 @@
     FreeformLineDrawer *freeformLineDrawer;
 
 }
+@property (strong, atomic) ALAssetsLibrary* library;
 @property (strong, nonatomic) IBOutlet UIImageView *drawImage;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 
