@@ -39,13 +39,14 @@
 
     [self.window makeKeyAndVisible];
     
-    [self initVariable];
+    [self initVariableGlobal];
     
     return YES;
 }
-- (void)initVariable{
-    TAX_RATE_VALUE = @"0 %";
-    TAX_STATUS_VALUE = TRUE;
+- (void)initVariableGlobal{
+    TAX_RATE_VALUE      = @"0 %";
+    TAX_STATUS_VALUE    = TRUE;
+    SALE_SUM_VALUE      = @"0";
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

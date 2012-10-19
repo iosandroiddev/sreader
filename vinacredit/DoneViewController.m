@@ -39,7 +39,7 @@
         imageU.image = acc.imageAcc;
     
         // get value 
-    lblSumPaid.text = [lib readFile:@"sumprice"];    
+    lblSumPaid.text = SALE_SUM_VALUE;    
     Strprice = [lib deleteDotNumber:lblSumPaid.text];
     lblSumPaid.text = [lblSumPaid.text stringByAppendingString:@" VND"];
 }

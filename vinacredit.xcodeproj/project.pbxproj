@@ -115,7 +115,6 @@
 		51935D76161C156100B00697 /* navigation_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 51935D69161C156100B00697 /* navigation_clear.png */; };
 		51935D77161C156100B00697 /* navigation_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 51935D6A161C156100B00697 /* navigation_dot.png */; };
 		51DB65681612C460009ECB0C /* firstsignin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51DB65671612C460009ECB0C /* firstsignin.txt */; };
-		51DC7ACD1611B4C0006DBC32 /* sumprice.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51DC7ACC1611B4C0006DBC32 /* sumprice.txt */; };
 		51DDFA1F161FC8A700E3443D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 51DDFA1E161FC8A700E3443D /* background.png */; };
 		51E4EC75161ED55300925F81 /* emaillogin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51E4EC74161ED55300925F81 /* emaillogin.txt */; };
 		51E94AAF1619592800401D3C /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E94AAD1619592800401D3C /* IdentifyViewController.m */; };
@@ -277,7 +276,6 @@
 		51935D69161C156100B00697 /* navigation_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigation_clear.png; path = Image/tablenumber/navigation_clear.png; sourceTree = "<group>"; };
 		51935D6A161C156100B00697 /* navigation_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigation_dot.png; path = Image/tablenumber/navigation_dot.png; sourceTree = "<group>"; };
 		51DB65671612C460009ECB0C /* firstsignin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = firstsignin.txt; path = vinacredit/file/firstsignin.txt; sourceTree = "<group>"; };
-		51DC7ACC1611B4C0006DBC32 /* sumprice.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sumprice.txt; path = vinacredit/file/sumprice.txt; sourceTree = "<group>"; };
 		51DDFA1E161FC8A700E3443D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Image/background.png; sourceTree = "<group>"; };
 		51E4EC74161ED55300925F81 /* emaillogin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = emaillogin.txt; path = vinacredit/file/emaillogin.txt; sourceTree = "<group>"; };
 		51E94AAC1619592800401D3C /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
@@ -662,7 +660,6 @@
 			children = (
 				51E4EC74161ED55300925F81 /* emaillogin.txt */,
 				51DB65671612C460009ECB0C /* firstsignin.txt */,
-				51DC7ACC1611B4C0006DBC32 /* sumprice.txt */,
 			);
 			name = FileText;
 			sourceTree = "<group>";
@@ -772,7 +769,6 @@
 				28A55EDA1609B50900015F72 /* SaleViewController.xib in Resources */,
 				28A55EDD1609B50900015F72 /* ItemCell.xib in Resources */,
 				28A55EDF1609B50900015F72 /* AddCell.xib in Resources */,
-				51DC7ACD1611B4C0006DBC32 /* sumprice.txt in Resources */,
 				51DB65681612C460009ECB0C /* firstsignin.txt in Resources */,
 				28D39DE9161436AB00FDD0CD /* Cell.xib in Resources */,
 				51E94AB01619592800401D3C /* IdentifyViewController.xib in Resources */,

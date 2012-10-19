@@ -30,7 +30,7 @@
     self.drawImage.transform = CGAffineTransformMakeRotation(180*M_PI/180);
 
     Library *lib = [[Library alloc]init];
-    priceLabel.text = [lib readFile:@"sumprice"];
+    priceLabel.text = SALE_SUM_VALUE;
     priceLabel.text = [priceLabel.text stringByAppendingString:@" VND"];
     
     // Do any additional setup after loading the view from its nib.

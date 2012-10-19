@@ -346,9 +346,7 @@ void checkStatus(OSStatus status)
     tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] + [tmpLableItem intValue]];
     labelSum.text = tmpLableSum;
     labelSum.text = [lib addDotNumber:labelSum.text];
-    [lib writeFile:@"sumprice" contentFile:labelSum.text];
-    NSLog(@"tmpLableSum : %@",tmpLableSum);
-    
+    SALE_SUM_VALUE = labelSum.text;
         //=====add image item========
     celldata.imageItem = ima;
     ima = [UIImage imageNamed:@"logo.png"];
@@ -376,7 +374,7 @@ void checkStatus(OSStatus status)
     }
     tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] - [celldata.labelItem intValue]];
     labelSum.text = [lib addDotNumber:tmpLableSum];
-    [lib writeFile:@"sumprice" contentFile:labelSum.text];
+    SALE_SUM_VALUE = labelSum.text;
     celldata.labelItem = [lib addDotNumber:celldata.labelItem];
     [self.tableView reloadData];
 }
@@ -395,7 +393,7 @@ void checkStatus(OSStatus status)
     }
     tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] + [celldata.labelItem intValue]];
     labelSum.text = [lib addDotNumber:tmpLableSum];
-    [lib writeFile:@"sumprice" contentFile:labelSum.text];
+    SALE_SUM_VALUE = labelSum.text;
     celldata.labelItem = [lib addDotNumber:celldata.labelItem];
     [self.tableView reloadData];
 }

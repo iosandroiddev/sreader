@@ -32,7 +32,7 @@ NSString *strChange;
     lib = [[Library alloc]init];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
-    lblSumPrice.text = [lib readFile:@"sumprice"];
+    lblSumPrice.text = SALE_SUM_VALUE;
     tmpSumPrice = lblSumPrice.text;
     
     lblChangePrice.text = @"-";
