@@ -128,13 +128,12 @@ bool bl_testEmail = FALSE;
     cell.textLabel.text = list.title;
     if (list.title == @"Tax") {
         //variable subtitle of Tax
-        Library *lib = [[Library alloc]init];
-        NSString *subtitleTax = [lib readFile:@"taxstatus"];
-        
-        if([subtitleTax isEqualToString:@"ON"]){            
-            NSString *tmp = [lib readFile:@"taxrate"];
-            subtitleTax = tmp;
+        NSString *subtitleTax;
+        if(TAX_STATUS_VALUE){
+            subtitleTax = TAX_RATE_VALUE;
         }
+        else
+            subtitleTax = @"OFF";
         cell.detailTextLabel.text = subtitleTax;
     }
 	return cell;

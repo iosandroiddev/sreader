@@ -16,7 +16,6 @@ NSString *tmpTax = @"0 %";
 NSString* strSwitchControl;
 - (void)viewDidLoad
 {
-    Library *lib = [[Library alloc]init];
     [super viewDidLoad];
     swit = [[UISwitch alloc] initWithFrame:CGRectZero];
     [swit setOn:NO animated:NO];
@@ -26,11 +25,7 @@ NSString* strSwitchControl;
         label = [[UILabel alloc] initWithFrame:CGRectMake(620.0f, 5.0f, 79.0f, 27.0f)];
     label.textAlignment = UITextAlignmentRight;
     label.backgroundColor = [UIColor clearColor];    
-
-    bool blRate = [self writeFileTaxRate];
-    if(blRate)NSLog(@"Failure blRate");
-    
-    label.text = [lib readFile:@"taxrate"];
+    label.text = TAX_RATE_VALUE;
     
     self.title = @"Tax";
    
@@ -67,7 +62,6 @@ NSString* strSwitchControl;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Library *lib = [[Library alloc]init];
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -79,12 +73,7 @@ NSString* strSwitchControl;
         cell.textLabel.text = @"Add Sale Tax";
         cell.accessoryView = swit;
 
-        bool blStatus = [self writeFileTaxStatus];
-        if(blStatus)NSLog(@"Failure blStatus");
-        
-        NSString *tmp = [lib readFile:@"taxstatus"];
-
-        if([tmp isEqualToString:@"OFF"])
+        if(!TAX_STATUS_VALUE)
             [swit setOn:NO animated:NO];
         else
             [swit setOn:YES animated:NO];
@@ -101,11 +90,10 @@ NSString* strSwitchControl;
 - (void) statusSwitchChanged:(id)sender {
     UISwitch* switchControl = sender;
     strSwitchControl = switchControl.on ? @"ON" : @"OFF";
-    
-    BOOL blStatus = [self writeFileTaxStatus];
-    if (!blStatus)
-        NSLog(@" write file taxStatus failure ");
-
+    if([strSwitchControl isEqualToString:@"ON"])
+        TAX_STATUS_VALUE = TRUE;
+    else
+        TAX_STATUS_VALUE = FALSE;
 }
 #pragma mark - Table view delegate
 
@@ -159,12 +147,8 @@ NSString* strSwitchControl;
     if(tmpTax.length > 5)
         return;
     
-        
     label.text = [tmpTax stringByAppendingString:@" %"];
-    
-    BOOL blRate = [self writeFileTaxRate];
-    if (!blRate)
-        NSLog(@" write file taxrate failure ");
+    TAX_RATE_VALUE = label.text;
 }
 
 - (IBAction)clear {
@@ -178,30 +162,6 @@ NSString* strSwitchControl;
 
     NSLog(@"tmp : %@",tmpTax);
     label.text = [tmpTax stringByAppendingString:@" %"];
-    
-    BOOL blRate = [self writeFileTaxRate];
-    if (!blRate)
-        NSLog(@" write file taxrate failure ");
-        
-}
-    // create and write content in File taxrate.txt and taxstatus.txt.
-- (BOOL )writeFileTaxStatus{
-    Library *lib = [[Library alloc]init];
-    
-    bool blStatus = [lib writeFile:@"taxstatus" contentFile:strSwitchControl];
-    
-    if (blStatus)
-        return TRUE;
-    return FALSE;
-}
-
-- (BOOL )writeFileTaxRate{
-    Library *lib = [[Library alloc]init];
-    
-    bool blRate = [lib writeFile:@"taxrate" contentFile:label.text];
-       
-    if (blRate)
-        return TRUE;
-    return FALSE;
+    TAX_RATE_VALUE = label.text;
 }
 @end

@@ -685,7 +685,7 @@ void audioRouteChangeListenerCallback (
 }
 - (BOOL)hasHeadset {
 #if TARGET_IPHONE_SIMULATOR
-#warning *** Simulator mode: audio session code works only on a device
+        //#warning *** Simulator mode: audio session code works only on a device
     return NO;
 #else
     CFStringRef route;

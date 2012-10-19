@@ -58,7 +58,7 @@
 
 - (IBAction)sending:(id)sender {
     Library *lib = [[Library alloc]init];
-    BOOL *tmp = [lib testEmail:emailAddress.text];
+    BOOL tmp = [lib testEmail:emailAddress.text];
     if(tmp){
         btnSend.enabled = TRUE;
         lblResultEmail.text = @"You check email.";

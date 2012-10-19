@@ -23,8 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *pathFileEmail = [self takePathFileEmail];
-    NSString *valueEmail = [NSString stringWithContentsOfFile:pathFileEmail];
+    Library *lib = [[Library alloc]init];
+    NSString *valueEmail = [lib readFile:@"emaillogin"];
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     if(acc.imageAcc != NULL)
@@ -111,17 +111,5 @@
 -(IBAction) gotoAccountView:(id)sender {
     Library *lib = [[Library alloc]init];
     [lib gotoInterFace:ACCOUNT pushView:FALSE navigationController:self.navigationController];    
-}
-- (NSString *)takePathFileEmail{
-    NSString *pathOfFile;
-    if(BUILD_DEVICE){
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        pathOfFile=[paths objectAtIndex:0];
-        //NSLog (@"path %@",pathOfFile);
-        pathOfFile = [pathOfFile stringByAppendingString:@"/emaillogin.txt"];
-    }
-    else
-        pathOfFile = [[NSBundle mainBundle] pathForResource:@"emaillogin" ofType:@"txt"];
-    return pathOfFile;
 }
 @end

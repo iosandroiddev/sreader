@@ -14,6 +14,7 @@
 #import "Library.h"
 #import "Account.h"
 #import "Macros.h"
+#import "Library.h"
 @implementation DetailSaleViewController
 
 @synthesize image = _image;
@@ -33,14 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *pathFileEmail = [self takePathFileEmail];
-    NSString *valueEmail = [NSString stringWithContentsOfFile:pathFileEmail];
+    Library *lib = [[Library alloc]init];
+    NSString *valueEmail = [lib readFile:@"emaillogin"];
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     if(acc.imageAcc != NULL)
         _image.image = acc.imageAcc;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    Library *lib = [[Library alloc] init];
     [_totalLabel setText:[lib addDotNumber:total]];
     // Do any additional setup after loading the view from its nib.
 }
@@ -100,17 +100,5 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-}
-- (NSString *)takePathFileEmail{
-    NSString *pathOfFile;
-    if(BUILD_DEVICE){
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        pathOfFile=[paths objectAtIndex:0];
-        //NSLog (@"path %@",pathOfFile);
-        pathOfFile = [pathOfFile stringByAppendingString:@"/emaillogin.txt"];
-    }
-    else
-        pathOfFile = [[NSBundle mainBundle] pathForResource:@"emaillogin" ofType:@"txt"];
-    return pathOfFile;
 }
 @end

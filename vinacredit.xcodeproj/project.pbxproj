@@ -61,8 +61,6 @@
 		512606FF162409BF00DB489B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606F41624094900DB489B /* AVFoundation.framework */; };
 		5126070216240AF000DB489B /* card lock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5126070016240AF000DB489B /* card lock.jpeg */; };
 		5126070316240AF000DB489B /* card unlock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5126070116240AF000DB489B /* card unlock.jpeg */; };
-		5164456F1613F2AD0091D1F3 /* taxrate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5164456E1613F2AD0091D1F3 /* taxrate.txt */; };
-		5164457A161412C40091D1F3 /* taxstatus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51644579161412C40091D1F3 /* taxstatus.txt */; };
 		517028F51622B3ED00073249 /* charge_money.png in Resources */ = {isa = PBXBuildFile; fileRef = 517028F41622B3ED00073249 /* charge_money.png */; };
 		517028F81622B89F00073249 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 517028F71622B89E00073249 /* clear.png */; };
 		517029271622D3EE00073249 /* change.png in Resources */ = {isa = PBXBuildFile; fileRef = 517029251622D3EE00073249 /* change.png */; };
@@ -77,6 +75,7 @@
 		5190516C163002A0007C9129 /* SReaderUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190516B163002A0007C9129 /* SReaderUtility.m */; };
 		5190516D163002E1007C9129 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190515A1630023B007C9129 /* Bill.m */; };
 		5190516E163002EA007C9129 /* SumBill.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190515816300232007C9129 /* SumBill.m */; };
+		5190517416301252007C9129 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5190517316301252007C9129 /* MessageUI.framework */; };
 		5190C585162D42940006D8D0 /* DoneViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5190C581162D42930006D8D0 /* DoneViewControllerIpad.xib */; };
 		5190C586162D42940006D8D0 /* InfoAccountViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5190C582162D42930006D8D0 /* InfoAccountViewControllerIpad.xib */; };
 		5190C587162D42940006D8D0 /* SignInViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5190C583162D42930006D8D0 /* SignInViewControllerIpad.xib */; };
@@ -216,8 +215,6 @@
 		512606FA1624097E00DB489B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5126070016240AF000DB489B /* card lock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card lock.jpeg"; path = "Image/card lock.jpeg"; sourceTree = "<group>"; };
 		5126070116240AF000DB489B /* card unlock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card unlock.jpeg"; path = "Image/card unlock.jpeg"; sourceTree = "<group>"; };
-		5164456E1613F2AD0091D1F3 /* taxrate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = taxrate.txt; path = vinacredit/file/taxrate.txt; sourceTree = "<group>"; };
-		51644579161412C40091D1F3 /* taxstatus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = taxstatus.txt; path = vinacredit/file/taxstatus.txt; sourceTree = "<group>"; };
 		517028F41622B3ED00073249 /* charge_money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = charge_money.png; path = Image/charge_money.png; sourceTree = "<group>"; };
 		517028F71622B89E00073249 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clear.png; path = Image/clear.png; sourceTree = "<group>"; };
 		517029251622D3EE00073249 /* change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = change.png; path = Image/change.png; sourceTree = "<group>"; };
@@ -238,6 +235,7 @@
 		519051671630028C007C9129 /* ParseDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseDate.m; path = resource/ParseDate.m; sourceTree = "<group>"; };
 		5190516916300294007C9129 /* SReaderDriver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SReaderDriver.c; path = resource/SReaderDriver.c; sourceTree = "<group>"; };
 		5190516B163002A0007C9129 /* SReaderUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SReaderUtility.m; path = resource/SReaderUtility.m; sourceTree = "<group>"; };
+		5190517316301252007C9129 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5190C581162D42930006D8D0 /* DoneViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DoneViewControllerIpad.xib; path = vinacredit/InterfaceIpad/DoneViewControllerIpad.xib; sourceTree = "<group>"; };
 		5190C582162D42930006D8D0 /* InfoAccountViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoAccountViewControllerIpad.xib; path = vinacredit/InterfaceIpad/InfoAccountViewControllerIpad.xib; sourceTree = "<group>"; };
 		5190C583162D42930006D8D0 /* SignInViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewControllerIpad.xib; path = vinacredit/InterfaceIpad/SignInViewControllerIpad.xib; sourceTree = "<group>"; };
@@ -309,6 +307,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5190517416301252007C9129 /* MessageUI.framework in Frameworks */,
 				51935D0F161BF10600B00697 /* QuartzCore.framework in Frameworks */,
 				28BB3F5D1613F6370033732B /* libsqlite3.dylib in Frameworks */,
 				280D6F7D15DDD16D00B4CB15 /* UIKit.framework in Frameworks */,
@@ -375,8 +374,9 @@
 		280D6F7B15DDD16D00B4CB15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				512606FA1624097E00DB489B /* CoreData.framework */,
 				512606F81624096900DB489B /* AudioToolbox.framework */,
+				5190517316301252007C9129 /* MessageUI.framework */,
+				512606FA1624097E00DB489B /* CoreData.framework */,
 				512606F61624095D00DB489B /* CoreAudio.framework */,
 				512606F41624094900DB489B /* AVFoundation.framework */,
 				51935D10161BF10E00B00697 /* SenTestingKit.framework */,
@@ -663,8 +663,6 @@
 				51E4EC74161ED55300925F81 /* emaillogin.txt */,
 				51DB65671612C460009ECB0C /* firstsignin.txt */,
 				51DC7ACC1611B4C0006DBC32 /* sumprice.txt */,
-				5164456E1613F2AD0091D1F3 /* taxrate.txt */,
-				51644579161412C40091D1F3 /* taxstatus.txt */,
 			);
 			name = FileText;
 			sourceTree = "<group>";
@@ -776,8 +774,6 @@
 				28A55EDF1609B50900015F72 /* AddCell.xib in Resources */,
 				51DC7ACD1611B4C0006DBC32 /* sumprice.txt in Resources */,
 				51DB65681612C460009ECB0C /* firstsignin.txt in Resources */,
-				5164456F1613F2AD0091D1F3 /* taxrate.txt in Resources */,
-				5164457A161412C40091D1F3 /* taxstatus.txt in Resources */,
 				28D39DE9161436AB00FDD0CD /* Cell.xib in Resources */,
 				51E94AB01619592800401D3C /* IdentifyViewController.xib in Resources */,
 				51E94AB516196E4A00401D3C /* SendingViewController.xib in Resources */,

@@ -38,9 +38,15 @@
     navigationController.view.frame = [self.window bounds];
 
     [self.window makeKeyAndVisible];
+    
+    [self initVariable];
+    
     return YES;
 }
-
+- (void)initVariable{
+    TAX_RATE_VALUE = @"0 %";
+    TAX_STATUS_VALUE = TRUE;
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
