@@ -50,6 +50,10 @@
     EMAIL_LOGIN_VALUE   = @"";
     IMG_SIGNATURE       = nil;
     IMG_IDENTIFY        = nil;
+    
+    GET_TIME_PAYMENT    = @""; // time when complete bill, end interface done
+    GET_DATE_PAYMENT    = @""; // date when complete bill, end interface done
+
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

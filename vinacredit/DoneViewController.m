@@ -65,9 +65,9 @@
     ParseDate *d = [[ParseDate alloc] init];
     Bill *bill = [[Bill alloc] init];
     SaleViewController *sale = [[SaleViewController alloc]init];
-    bill.timeSale = [d getCurrentTime];
+    bill.timeSale = GET_TIME_PAYMENT;
     bill.sumItem = Strprice;
-    bill.dateSale = [d getCurrentDate];
+    bill.dateSale = GET_DATE_PAYMENT;
     bill.emailBill = valueEmail;
     SumBill *sum = [[SumBill alloc] initWithDateSale:[d getCurrentDate] sumBill:Strprice bill:bill emailSumBill:valueEmail];
   

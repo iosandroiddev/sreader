@@ -7,6 +7,7 @@
 //
 
 #import "ReceiptViewController.h"
+#import "ParseDate.h"
 #import "Library.h"
 #import "Macros.h"
 
@@ -17,6 +18,10 @@
 
 - (void)viewDidLoad
 {
+    ParseDate *d = [[ParseDate alloc] init];
+    GET_DATE_PAYMENT = [d getCurrentDate];
+    GET_TIME_PAYMENT = [d getCurrentTime];
+    
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [emailUser becomeFirstResponder];
     [super viewDidLoad];
@@ -69,9 +74,12 @@
         
         mailer.mailComposeDelegate = self;
         
-        NSString *strSubject = @"Receipt : ";        
-        strSubject = [strSubject stringByAppendingString:SALE_SUM_VALUE];
-        strSubject = [strSubject stringByAppendingString:@"VND"];
+        NSString *strSubject = @"Receipt: ";
+        strSubject = [strSubject stringByAppendingString:GET_TIME_PAYMENT];
+        strSubject = [strSubject stringByAppendingString:@" "];
+        strSubject = [strSubject stringByAppendingString:GET_DATE_PAYMENT];
+        strSubject = [strSubject stringByAppendingString:@" "];
+        strSubject = [strSubject stringByAppendingString:EMAIL_LOGIN_VALUE];
         [mailer setSubject:strSubject];
         
         NSArray *toRecipients = [NSArray arrayWithObjects:email, nil];
@@ -80,7 +88,7 @@
             //UIImage *myImage = [UIImage imageNamed:@"mobiletuts-logo.png"];
         UIImage *myImage = IMG_SIGNATURE;
         NSData *imageData = UIImagePNGRepresentation(myImage);
-        [mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
+            //[mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
         
             //NSString *emailBody = emailUser.text;
         NSString *emailBody = @"Thank you very much.";
@@ -100,6 +108,32 @@
                                           otherButtonTitles: nil];
     [alert show];
     return FALSE;
+}
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	switch (result)
+	{
+		case MFMailComposeResultCancelled:
+        NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued");
+        break;
+		case MFMailComposeResultSaved:
+        NSLog(@"Mail saved: you saved the email message in the Drafts folder");
+        break;
+		case MFMailComposeResultSent:{
+            NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send the next time the user connects to email");
+            Library *lib = [[Library alloc]init];
+            [lib gotoInterFace:DONE pushView:YES navigationController:self.navigationController];
+            break;		    
+        }
+        case MFMailComposeResultFailed:
+        NSLog(@"Mail failed: the email message was nog saved or queued, possibly due to an error");
+        break;
+		default:
+        NSLog(@"Mail not sent");
+        break;
+	}
+    
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 @end
