@@ -84,13 +84,23 @@
         NSArray *toRecipients = [NSArray arrayWithObjects:email, nil];
         [mailer setToRecipients:toRecipients];
         
+        NSArray *toCcRecipients =[NSArray arrayWithObject:EMAIL_VINACREDIT_STR];
+        [mailer setCcRecipients:toCcRecipients];
+        
             //UIImage *myImage = [UIImage imageNamed:@"mobiletuts-logo.png"];
-        UIImage *myImage = IMG_SIGNATURE;
-        NSData *imageData = UIImagePNGRepresentation(myImage);
+            //UIImage *myImage = IMG_SIGNATURE;
+            //NSData *imageData = UIImagePNGRepresentation(myImage);
             //[mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
         
             //NSString *emailBody = emailUser.text;
-        NSString *emailBody = @"Thank you very much.";
+        NSString *emailBody = @"Hi ";
+        emailBody = [emailBody stringByAppendingString:emailUser.text];
+        emailBody = [emailBody stringByAppendingString:@",\n\n"];
+        emailBody = [emailBody stringByAppendingString:@"Total :"];
+        emailBody = [emailBody stringByAppendingString:SALE_SUM_VALUE];
+        emailBody = [emailBody stringByAppendingString:@" VND"];
+        emailBody = [emailBody stringByAppendingString:@"\n\n"];
+        emailBody = [emailBody stringByAppendingString:@"Thank you very much."];
         [mailer setMessageBody:emailBody isHTML:NO];
         
             // only for iPad

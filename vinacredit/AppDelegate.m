@@ -44,17 +44,17 @@
     return YES;
 }
 - (void)initVariableGlobal{
-    TAX_RATE_VALUE      = @"0 %";
-    TAX_STATUS_VALUE    = TRUE;
-    SALE_SUM_VALUE      = @"0";    
-    IMG_SIGNATURE       = nil;
-    IMG_IDENTIFY        = nil;
+    TAX_RATE_VALUE           = @"0 %";
+    TAX_STATUS_VALUE         = TRUE;
+    SALE_SUM_VALUE           = @"0";    
+    IMG_SIGNATURE            = nil;
+    IMG_IDENTIFY             = nil;
     
-    GET_TIME_PAYMENT    = @""; // time when complete bill, end interface done
-    GET_DATE_PAYMENT    = @""; // date when complete bill, end interface done
+    GET_TIME_PAYMENT         = @""; // time when complete bill, end interface done
+    GET_DATE_PAYMENT         = @""; // date when complete bill, end interface done
     
-    EMAIL_LOGIN_VALUE   = @"";
-    PASS_LOGIN_VALUE    = @"";
+    EMAIL_LOGIN_VALUE        = @"";
+    PASS_LOGIN_VALUE         = @"";
 
         //INFORMATION ACCOUNT
     INFO.FIRST_NAME_STR      = @"";
@@ -66,6 +66,8 @@
     INFO.CONFIRMPASS_STR     = @"";
     INFO.USER_IMAGE          = nil;
     INFO.NOTIFY_ERROR_STR    = @"";
+    
+    EMAIL_VINACREDIT_STR      = @"vinacredit@gmail.com";
 
 }
 - (void)applicationWillResignActive:(UIApplication *)application
