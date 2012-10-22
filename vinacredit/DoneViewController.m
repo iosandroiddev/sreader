@@ -14,7 +14,6 @@
 #import "SumBill.h"
 #import "Bill.h"
 #import "SaleViewController.h"
-#import "ParseDate.h"
 @interface DoneViewController ()
 
 @end
@@ -62,18 +61,17 @@
 }
 
 - (IBAction)buttonDone:(id)sender {
-    ParseDate *d = [[ParseDate alloc] init];
+    Library *lib = [[Library alloc]init];
     Bill *bill = [[Bill alloc] init];
     SaleViewController *sale = [[SaleViewController alloc]init];
     bill.timeSale = GET_TIME_PAYMENT;
     bill.sumItem = Strprice;
     bill.dateSale = GET_DATE_PAYMENT;
     bill.emailBill = valueEmail;
-    SumBill *sum = [[SumBill alloc] initWithDateSale:[d getCurrentDate] sumBill:Strprice bill:bill emailSumBill:valueEmail];
+    SumBill *sum = [[SumBill alloc] initWithDateSale:GET_DATE_PAYMENT sumBill:Strprice bill:bill emailSumBill:valueEmail];
   
-    [[ConnectDatabase database] insertBill:sum currentDate:[d getCurrentDate] email:valueEmail];
+    [[ConnectDatabase database] insertBill:sum currentDate:GET_DATE_PAYMENT email:valueEmail];
     
-    Library *lib = [[Library alloc]init];
     [lib gotoInterFace:SALE pushView:FALSE navigationController:self.navigationController];
     [sale clear];
 }

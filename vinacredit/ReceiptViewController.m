@@ -7,7 +7,6 @@
 //
 
 #import "ReceiptViewController.h"
-#import "ParseDate.h"
 #import "Library.h"
 #import "Macros.h"
 
@@ -18,9 +17,9 @@
 
 - (void)viewDidLoad
 {
-    ParseDate *d = [[ParseDate alloc] init];
-    GET_DATE_PAYMENT = [d getCurrentDate];
-    GET_TIME_PAYMENT = [d getCurrentTime];
+    Library *lib = [[Library alloc] init];
+    GET_DATE_PAYMENT = [lib getCurrentDate];
+    GET_TIME_PAYMENT = [lib getCurrentTime];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [emailUser becomeFirstResponder];

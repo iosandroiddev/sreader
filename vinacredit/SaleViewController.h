@@ -49,7 +49,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *rowDataArray;
 @property (strong, nonatomic) Library *lib;
-@property (strong, nonatomic) CellData *celldata;
 
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operationPressed:(UIButton *)sender;

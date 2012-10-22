@@ -72,7 +72,6 @@
 		5190516016300267007C9129 /* ConnectDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190515F16300267007C9129 /* ConnectDatabase.m */; };
 		519051621630026E007C9129 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 519051611630026E007C9129 /* database.sqlite */; };
 		5190516516300282007C9129 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190516416300282007C9129 /* MBProgressHUD.m */; };
-		519051681630028C007C9129 /* ParseDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 519051671630028C007C9129 /* ParseDate.m */; };
 		5190516A16300294007C9129 /* SReaderDriver.c in Sources */ = {isa = PBXBuildFile; fileRef = 5190516916300294007C9129 /* SReaderDriver.c */; };
 		5190516C163002A0007C9129 /* SReaderUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190516B163002A0007C9129 /* SReaderUtility.m */; };
 		5190516D163002E1007C9129 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190515A1630023B007C9129 /* Bill.m */; };
@@ -234,8 +233,6 @@
 		519051611630026E007C9129 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.sqlite; path = resource/database.sqlite; sourceTree = "<group>"; };
 		5190516316300282007C9129 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = resource/MBProgressHUD.h; sourceTree = "<group>"; };
 		5190516416300282007C9129 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = resource/MBProgressHUD.m; sourceTree = "<group>"; };
-		519051661630028C007C9129 /* ParseDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseDate.h; path = resource/ParseDate.h; sourceTree = "<group>"; };
-		519051671630028C007C9129 /* ParseDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseDate.m; path = resource/ParseDate.m; sourceTree = "<group>"; };
 		5190516916300294007C9129 /* SReaderDriver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SReaderDriver.c; path = resource/SReaderDriver.c; sourceTree = "<group>"; };
 		5190516B163002A0007C9129 /* SReaderUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SReaderUtility.m; path = resource/SReaderUtility.m; sourceTree = "<group>"; };
 		5190517316301252007C9129 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -681,8 +678,6 @@
 				51935D07161BF0A500B00697 /* FreeformLineDrawer.m */,
 				5190516316300282007C9129 /* MBProgressHUD.h */,
 				5190516416300282007C9129 /* MBProgressHUD.m */,
-				519051661630028C007C9129 /* ParseDate.h */,
-				519051671630028C007C9129 /* ParseDate.m */,
 				512606EF162408F000DB489B /* SReaderDriver.h */,
 				5190516916300294007C9129 /* SReaderDriver.c */,
 				512606F0162408F000DB489B /* SReaderUtility.h */,
@@ -878,7 +873,6 @@
 				5190515D16300251007C9129 /* Account.m in Sources */,
 				5190516016300267007C9129 /* ConnectDatabase.m in Sources */,
 				5190516516300282007C9129 /* MBProgressHUD.m in Sources */,
-				519051681630028C007C9129 /* ParseDate.m in Sources */,
 				5190516A16300294007C9129 /* SReaderDriver.c in Sources */,
 				5190516C163002A0007C9129 /* SReaderUtility.m in Sources */,
 				510B37A016315E6A00EB9CAC /* CustomPhotoAlbum.m in Sources */,

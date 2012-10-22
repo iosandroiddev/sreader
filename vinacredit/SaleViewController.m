@@ -8,7 +8,6 @@
 
 #import "SaleViewController.h"
 #import "Macros.h"
-#import "ParseDate.h"
 #import "IdentifyViewController.h"
 #import "SumBill.h"
 #import "Bill.h"
@@ -43,7 +42,6 @@ SaleViewController* THIS = NULL;
 @synthesize isNumber;
 @synthesize rowDataArray;
 @synthesize lib;
-@synthesize celldata;
 bool flagLableSum = TRUE;
 NSString *tmpLableSum;
 NSString *tmpLableItem;
@@ -69,7 +67,6 @@ void checkStatus(OSStatus status)
 
 - (void)viewDidLoad
 {
-    celldata = [[CellData alloc] init];
     lib = [[Library alloc]init];
     valueEmail = EMAIL_LOGIN_VALUE;
     [self sreaderViewDidLoad];
@@ -158,7 +155,7 @@ void checkStatus(OSStatus status)
             cus = (ItemCell*)[[[NSBundle mainBundle] loadNibNamed:@"ItemCell" owner:self options:nil] lastObject];
             cus.delegate = self;
         }
-        celldata = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
+        CellData *celldata = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
         cus.idx = indexPath.row;
         if(celldata.textItem !=nil)
             cus.itemField.text = celldata.textItem;
@@ -190,6 +187,7 @@ void checkStatus(OSStatus status)
                 cus = (ItemCell*)[[[NSBundle mainBundle] loadNibNamed:@"ItemCellIpad" owner:self options:nil] lastObject];
                 cus.delegate = self;
             }
+            CellData *celldata = [[CellData alloc] init];
             celldata = (CellData*)[rowDataArray objectAtIndex:indexPath.row];
             cus.idx = indexPath.row;
             if(celldata.textItem !=nil)
@@ -313,6 +311,7 @@ void checkStatus(OSStatus status)
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    CellData *celldata = [[CellData alloc] init];
     ima = [info objectForKey:UIImagePickerControllerEditedImage];
     celldata.imageItem = ima;
     [picker dismissModalViewControllerAnimated:YES];
@@ -325,7 +324,7 @@ void checkStatus(OSStatus status)
 -(void)addCellDidAdd:(AddCell *)addCell{
         // test valueItem % 100
     if([value intValue] % 100 !=0)return;
-    
+    CellData *celldata = [[CellData alloc] init];
     NSLog(@"test add cell");
     [rowDataArray addObject:celldata];
     celldata.textItem = text ;
@@ -357,6 +356,7 @@ void checkStatus(OSStatus status)
 -(void)customized1CellDidMinus:(ItemCell *)customized1Cell{
     
     NSLog(@"test minus item");
+    CellData *celldata = [[CellData alloc] init];
     celldata = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
     celldata.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
     int a = [celldata.numItem intValue];
@@ -381,6 +381,7 @@ void checkStatus(OSStatus status)
 -(void)customized1CellDidPlus:(ItemCell *)customized1Cell{
     
     NSLog(@"test plus item");
+    CellData *celldata = [[CellData alloc] init];
     celldata = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
     celldata.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
     int a = [celldata.numItem intValue];
