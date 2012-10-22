@@ -44,15 +44,24 @@ static ConnectDatabase *_database;
 -(void)dealloc {
     sqlite3_close(_database);
 }
+
+
 -(NSArray *)sumBill:(NSString *)email{
     char *error;
     NSMutableArray *retval = [[NSMutableArray alloc] init];
     //NSString *query = [NSString stringWithFormat:@"SELECT * FROM SumBill WHERE email=\"%@\" ORDER BY Id DESC", email];
     NSString *que = [NSString stringWithFormat:@"SELECT * FROM SumBill WHERE email=\"%@\" ORDER BY rowid DESC", email];
     NSString *update = [NSString stringWithFormat:@"UPDATE SumBill SET sumBill = (select sum(Bill.sumItem) from Bill where SumBill.email = Bill.email and SumBill.dateSale = Bill.dateSale)"];
+    NSString *delete = [NSString stringWithFormat:@"DELETE FROM SumBill WHERE (rowid = (SELECT min(rowid) FROM SumBill WHERE email = \"%@\" )) and ((SELECT count(rowid) FROM SumBill WHERE email = \"%@\") > 7 ) ",email,email];
     if( sqlite3_exec(_database, [update UTF8String], NULL, NULL, &error) == SQLITE_OK )
         {
             NSLog(@"SumBill update successful.");
+            if( sqlite3_exec(_database, [delete UTF8String], NULL, NULL, &error) == SQLITE_OK )
+                {
+                    NSLog(@"SumBill delete successful.");
+                } else {
+                    NSLog(@"Error: %s", error);
+                }
         }
         else
         {
