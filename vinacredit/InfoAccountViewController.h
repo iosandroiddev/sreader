@@ -27,8 +27,10 @@
 	CGPoint offset;
 	UITextField *activeField;
     UIImagePickerController *imagePicker;
+    IBOutlet UILabel *lblNotifyError;
 }
 
+@property (strong, nonatomic) IBOutlet UILabel *lblNotifyError;
 @property (strong, nonatomic) IBOutlet UIButton *btnImage;
 @property (strong, nonatomic) IBOutlet UITextField *firstName;
 @property (strong, nonatomic) IBOutlet UITextField *lastName;
