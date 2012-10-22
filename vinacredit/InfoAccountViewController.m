@@ -212,7 +212,8 @@
     [btnImage setImage:[info objectForKey:UIImagePickerControllerEditedImage] forState:UIControlStateNormal];
 //    btnImage.imageView.image = [info objectForKey:UIImagePickerControllerEditedImage];
     [picker dismissModalViewControllerAnimated:YES];
-    NSLog(@"test image picker");
+    if(DEBUG_SCR)
+        NSLog(@"test image picker");
     
 }
 

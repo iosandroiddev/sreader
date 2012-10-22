@@ -88,7 +88,8 @@ void checkStatus(OSStatus status)
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     text = textField.text;
-    NSLog(@"test: %@",text);
+    if(DEBUG_SCR)
+        NSLog(@"test: %@",text);
     return YES;
 }
 - (void)viewDidUnload
@@ -144,8 +145,11 @@ void checkStatus(OSStatus status)
             ad.delegate = self;
         }
         ad.adx = indexPath.row;
-        NSLog(@"row indexpath %d",indexPath.row);
-        NSLog(@"row data array %d",[rowDataArray count]);
+        if(DEBUG_SCR){
+            NSLog(@"row indexpath %d",indexPath.row);
+            NSLog(@"row data array %d",[rowDataArray count]);
+        }
+        
         ad.textItem.text = text;
         ad.labelItem.text = [lib addDotNumber:value];
         ad.imageItem.image = ima;
@@ -181,7 +185,8 @@ void checkStatus(OSStatus status)
                 ad.delegate = self;
             }
             ad.adx = indexPath.row;
-            NSLog(@"%d",ad.adx);
+            if(DEBUG_SCR)
+                NSLog(@"%d",ad.adx);
             ad.textItem.text = text;
             ad.labelItem.text = [lib addDotNumber:value];
             ad.imageItem.image = ima;
@@ -243,9 +248,10 @@ void checkStatus(OSStatus status)
         self.isNumber = YES;
         tmpStrValue = [sender currentTitle];
     }
-    NSLog(@" %u",tmpStrValue.length);
+    if(DEBUG_SCR)
+        NSLog(@" %u",tmpStrValue.length);
     if(tmpStrValue.length > 8)
-        tmpStrValue = @"99999999";
+        tmpStrValue = @"99999000";
     value = tmpStrValue;
     [self.tableView reloadData];
     
@@ -327,7 +333,8 @@ void checkStatus(OSStatus status)
     ima = [info objectForKey:UIImagePickerControllerEditedImage];
     celldata.imageItem = ima;
     [picker dismissModalViewControllerAnimated:YES];
-    NSLog(@"test image picker");
+    if(DEBUG_SCR)
+        NSLog(@"test image picker");
     [self.tableView reloadData];
     
 }
@@ -338,10 +345,8 @@ void checkStatus(OSStatus status)
     flagAddCell = TRUE;
     if([value intValue] % 100 !=0)return;
     CellData *celldata = [[CellData alloc] init];
-    NSLog(@"test add cell");
     [rowDataArray addObject:celldata];
     celldata.textItem = text ;
-    NSLog(@"test add : %@",celldata.textItem);
     text = nil;
         //=====enter price item======
     celldata.labelItem = [lib addDotNumber:value];
@@ -354,7 +359,10 @@ void checkStatus(OSStatus status)
         tmpLableSum = labelSum.text;
         flagLableSum = FALSE;
     }
-    
+    if(DEBUG_SCR){
+        NSLog(@"test add : %@",celldata.textItem);
+        NSLog(@"test add cell");
+    }
     tmpLableSum = [NSString stringWithFormat:@"%d",[tmpLableSum intValue] + [tmpLableItem intValue]];
     labelSum.text = tmpLableSum;
     labelSum.text = [lib addDotNumber:labelSum.text];
@@ -367,8 +375,8 @@ void checkStatus(OSStatus status)
 }
 #pragma mark Minus Cell Delegate
 -(void)customized1CellDidMinus:(ItemCell *)customized1Cell{
-    
-    NSLog(@"test minus item");
+    if(DEBUG_SCR)
+        NSLog(@"test minus item");
     CellData *celldata = [[CellData alloc] init];
     celldata = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
     celldata.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];
@@ -394,7 +402,8 @@ void checkStatus(OSStatus status)
 #pragma mark Plus Cell Delegate
 -(void)customized1CellDidPlus:(ItemCell *)customized1Cell{
     
-    NSLog(@"test plus item");
+    if(DEBUG_SCR)
+        NSLog(@"test plus item");
     CellData *celldata = [[CellData alloc] init];
     celldata = (CellData*)[rowDataArray objectAtIndex:customized1Cell.idx];
     celldata.labelItem = [lib deleteDotNumber:customized1Cell.itemLabel.text];

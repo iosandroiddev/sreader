@@ -101,7 +101,7 @@ NSString *strChange;
         tmpPriceItem = digit;
     }
     if (tmpPriceItem.length > 10)
-        tmpPriceItem = @"9999999999";
+        tmpPriceItem = @"9999999000";
     double dbPriceItem = [tmpPriceItem doubleValue];
 
     tmpSumPrice = [tmpSumPrice stringByReplacingOccurrencesOfString:@"," withString:@""];
