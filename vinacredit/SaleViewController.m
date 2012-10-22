@@ -43,6 +43,7 @@ SaleViewController* THIS = NULL;
 @synthesize rowDataArray;
 @synthesize lib;
 bool flagLableSum = TRUE;
+bool flagAddCell = FALSE;
 NSString *tmpLableSum;
 NSString *tmpLableItem;
 NSString *pathOfFile;
@@ -53,12 +54,14 @@ NSFileManager *filemanager;
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 }
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
     
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
+
 void checkStatus(OSStatus status)
 {
         //NSLog(@"HELLO: Status=%ld", status);
@@ -131,7 +134,7 @@ void checkStatus(OSStatus status)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier ;
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    if(BUILD_IPHONE_OR_IPAD)
     {
     if(indexPath.row == [rowDataArray count]){
         CellIdentifier = @"AddCell";
@@ -141,11 +144,12 @@ void checkStatus(OSStatus status)
             ad.delegate = self;
         }
         ad.adx = indexPath.row;
-        NSLog(@"%d",ad.adx);
+        NSLog(@"row indexpath %d",indexPath.row);
+        NSLog(@"row data array %d",[rowDataArray count]);
         ad.textItem.text = text;
         ad.labelItem.text = [lib addDotNumber:value];
         ad.imageItem.image = ima;
-        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+
         return ad;
     }
     else{
@@ -162,6 +166,10 @@ void checkStatus(OSStatus status)
         cus.itemLabel.text = celldata.labelItem;
         cus.itemImage.image = celldata.imageItem;
         cus.itemNum.text = celldata.numItem;
+        if(flagAddCell){
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[rowDataArray count]inSection:0]atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            flagAddCell = FALSE;
+        }
         return cus;
     }
     }else {
@@ -195,6 +203,10 @@ void checkStatus(OSStatus status)
             cus.itemLabel.text = celldata.labelItem;
             cus.itemImage.image = celldata.imageItem;
             cus.itemNum.text = celldata.numItem;
+            if(flagAddCell){
+                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[rowDataArray count]inSection:0]atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+                flagAddCell = FALSE;
+            }
             return cus;
         }
     }
@@ -259,7 +271,7 @@ void checkStatus(OSStatus status)
     tmpLableSum = @"0";
     text = nil;
 }
-
+#pragma Clear Bill
 -(IBAction)clear {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDelegate:self];
@@ -320,9 +332,10 @@ void checkStatus(OSStatus status)
     
 }
 
-#pragma mark AddCell Delegate
+#pragma mark Add Cell Delegate
 -(void)addCellDidAdd:(AddCell *)addCell{
         // test valueItem % 100
+    flagAddCell = TRUE;
     if([value intValue] % 100 !=0)return;
     CellData *celldata = [[CellData alloc] init];
     NSLog(@"test add cell");
@@ -349,10 +362,10 @@ void checkStatus(OSStatus status)
         //=====add image item========
     celldata.imageItem = ima;
     ima = [UIImage imageNamed:@"logo.png"];
-    
+
     [self.tableView reloadData];
 }
-#pragma mark ItemCell Delegate
+#pragma mark Minus Cell Delegate
 -(void)customized1CellDidMinus:(ItemCell *)customized1Cell{
     
     NSLog(@"test minus item");
@@ -378,6 +391,7 @@ void checkStatus(OSStatus status)
     celldata.labelItem = [lib addDotNumber:celldata.labelItem];
     [self.tableView reloadData];
 }
+#pragma mark Plus Cell Delegate
 -(void)customized1CellDidPlus:(ItemCell *)customized1Cell{
     
     NSLog(@"test plus item");
@@ -682,6 +696,7 @@ void audioRouteChangeListenerCallback (
 	}
 	
 }
+#pragma mark Check Headset
 - (BOOL)hasHeadset {
 #if TARGET_IPHONE_SIMULATOR
         //#warning *** Simulator mode: audio session code works only on a device
@@ -854,7 +869,7 @@ void CloseSinWave(void)
 {
 	SReader_Stop();
 }
-
+#pragma mark Reader Detect
 - (BOOL)SReader_Detect {
 	NSString* str = NULL;
 	
