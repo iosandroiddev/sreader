@@ -28,7 +28,7 @@
     brush = 5.0;
     opacity = 1.0;
     self.view.transform = CGAffineTransformMakeRotation(90*M_PI/180);
-    self.drawImage.transform = CGAffineTransformMakeRotation(180*M_PI/180);
+        //self.drawImage.transform = CGAffineTransformMakeRotation(180*M_PI/180);
     
     self.library = [[ALAssetsLibrary alloc] init];
     
@@ -108,6 +108,21 @@
 }
     // goto Sending Interface
 - (IBAction)gotoReceipt:(id)sender {
+    
+    UIGraphicsBeginImageContext(self.drawImage.frame.size);
+    CGContextRef theContext = UIGraphicsGetCurrentContext();
+    [self.drawImage.layer renderInContext:theContext];
+    
+    IMG_SIGNATURE = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+        //UIImageWriteToSavedPhotosAlbum(IMG_SIGNATURE, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+    [self.library saveImage:IMG_SIGNATURE toAlbum:@"Vinacredit" withCompletionBlock:^(NSError *error) {
+        if (error!=nil) {
+            NSLog(@"Big error: %@", [error description]);
+        }
+    }];
+    
     Library *lib = [[Library alloc]init];
     [lib gotoInterFace:SENDING pushView:TRUE navigationController:self.navigationController];
     
