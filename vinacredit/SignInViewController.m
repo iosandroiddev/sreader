@@ -139,7 +139,8 @@ bool flagFirstLogin = true;
         psswrd=[psswrd stringByReplacingOccurrencesOfString:@" " withString:@""];
         if([mutableEmail isEqualToString:[emailAddress text]]&&[psswrd isEqualToString:[password text]]){
             [lblLoginStatus setText:@"Login Successful!!"];
-            NSLog(@"flag %c",flagFirstSignIn);
+            if(DEBUG_SCR)
+                NSLog(@"flag %c",flagFirstSignIn);
             if(flagFirstSignIn)
                 [self.navigationController pushViewController:info animated:YES];
             else
@@ -154,6 +155,7 @@ bool flagFirstLogin = true;
 }
 - (IBAction)gotoSale:(id)sender {
     EMAIL_LOGIN_VALUE = emailAddress.text;
+    PASS_LOGIN_VALUE  = password.text;
     
     [emailAddress resignFirstResponder];
     [password resignFirstResponder];

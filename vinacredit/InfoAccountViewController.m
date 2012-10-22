@@ -16,6 +16,7 @@
 
 @implementation InfoAccountViewController
 
+@synthesize lblNotifyError;
 @synthesize btnImage;
 @synthesize firstName;
 @synthesize lastName;
@@ -96,35 +97,47 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 	[textField resignFirstResponder];
-    NSLog(@"firstname:%@",firstName.text);
-    NSLog(@"lastName:%@",lastName.text);
-    NSLog(@"companyName:%@",companyName.text);
-    NSLog(@"address:%@",address.text);
-    NSLog(@"emailName:%@",emailName.text);
-    NSLog(@"oldpass:%d",oldpass.text.length);
-    NSLog(@"password:%@",password.text);
-    NSLog(@"confirmPass:%@",confirmPass.text);
-    Library *lib = [[Library alloc] init];
-    if( firstName.text.length > 0 && lastName.text.length > 0 && companyName.text.length > 0 && address.text.length > 0 && emailName.text.length > 0 && oldpass.text.length > 0 &&  password.text.length > 0 && confirmPass.text.length > 0 && [lib isCheckPass:password.text currentPass:confirmPass.text])
-    {
+    if(DEBUG_SCR){
+        NSLog(@"firstname:%@",firstName.text);
+        NSLog(@"lastName:%@",lastName.text);
+        NSLog(@"companyName:%@",companyName.text);
+        NSLog(@"address:%@",address.text);
+        NSLog(@"emailName:%@",emailName.text);
+        NSLog(@"oldpass:%d",oldpass.text.length);
+        NSLog(@"password:%@",password.text);
+        NSLog(@"confirmPass:%@",confirmPass.text);
+    }
+    
+    INFO.FIRST_NAME_STR      = firstName.text;
+    INFO.LAST_NAME_STR       = lastName.text;
+    INFO.COMPANY_NAME_STR    = companyName.text;
+    INFO.ADDRESS_STR         = address.text;
+    INFO.OLDPASS_STR         = oldpass.text;
+    INFO.PASSWORD_STR        = password.text;
+    INFO.CONFIRMPASS_STR     = confirmPass.text;
+    INFO.USER_IMAGE          = (UIImage *)imagePicker;
+
+    Library *lib = [[Library alloc]init];
+    if([lib NotifyError]){
         [barButtonSale setEnabled:YES];
+        INFO.NOTIFY_ERROR_STR = @"update info success";
     } else {
         [barButtonSale setEnabled:NO];
     }
+    lblNotifyError.text = INFO.NOTIFY_ERROR_STR;
 	return YES;
 }
-
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    NSLog(@"asdasd:%@",firstName.text);
+    emailName.text = EMAIL_LOGIN_VALUE;
+    emailName.enabled = NO;
+    [super viewDidLoad];    
     keyboardVisible = NO;
     [barButtonSale setEnabled:NO];
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     barButtonWelcome = nil;
     barButtonSale = nil;
     lastName = nil;
@@ -145,6 +158,8 @@
     [self setOldpass:nil];
     btnImage = nil;
     [self setBtnImage:nil];
+    lblNotifyError = nil;
+    [self setLblNotifyError:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
