@@ -67,6 +67,12 @@
     INFO.USER_IMAGE          = nil;
     INFO.NOTIFY_ERROR_STR    = @"";
     
+    
+    LANGUAGE_BL              = YES;// yes is english, no is vietnam
+    WELCOME_TO_VINACREDIT_LBL= @"Welcome to Vinacredit";// lbl : label
+    WELCOME_TEXT_LBL         = @"Free credit card reader Take your first payment today Nightly deposits to your bank";
+    WELCOME_SIGNIN_BTN       = @"Sign In";// btn : button
+    
     EMAIL_VINACREDIT_STR      = @"vinacredit@gmail.com";
 
 }

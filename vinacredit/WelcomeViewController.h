@@ -10,10 +10,18 @@
 
 @interface WelcomeViewController : UIViewController {
     
+    IBOutlet UILabel *welcome_vinacredit;
+    IBOutlet UILabel *welcome_text;
+    IBOutlet UIButton *addSignIn;
 
 }
+@property (strong, nonatomic) IBOutlet UILabel *welcome_vinacredit;
+@property (strong, nonatomic) IBOutlet UILabel *welcome_text;
+@property (strong, nonatomic) IBOutlet UIButton *addSignIn;
 
 - (IBAction)gotoSignIn:(id)sender;
+- (IBAction)selectVietnam:(id)sender;
+- (IBAction)selectEnglish:(id)sender;
 
 
 @end

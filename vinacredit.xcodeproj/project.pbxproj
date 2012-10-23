@@ -63,6 +63,8 @@
 		512606FF162409BF00DB489B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606F41624094900DB489B /* AVFoundation.framework */; };
 		5126070216240AF000DB489B /* card lock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5126070016240AF000DB489B /* card lock.jpeg */; };
 		5126070316240AF000DB489B /* card unlock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5126070116240AF000DB489B /* card unlock.jpeg */; };
+		51344186163659FE00755D23 /* english_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 51344184163659FE00755D23 /* english_flag.png */; };
+		51344187163659FE00755D23 /* vietnam_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 51344185163659FE00755D23 /* vietnam_flag.png */; };
 		517028F51622B3ED00073249 /* charge_money.png in Resources */ = {isa = PBXBuildFile; fileRef = 517028F41622B3ED00073249 /* charge_money.png */; };
 		517028F81622B89F00073249 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 517028F71622B89E00073249 /* clear.png */; };
 		517029271622D3EE00073249 /* change.png in Resources */ = {isa = PBXBuildFile; fileRef = 517029251622D3EE00073249 /* change.png */; };
@@ -217,6 +219,8 @@
 		512606FA1624097E00DB489B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5126070016240AF000DB489B /* card lock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card lock.jpeg"; path = "Image/card lock.jpeg"; sourceTree = "<group>"; };
 		5126070116240AF000DB489B /* card unlock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "card unlock.jpeg"; path = "Image/card unlock.jpeg"; sourceTree = "<group>"; };
+		51344184163659FE00755D23 /* english_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = english_flag.png; path = Image/english_flag.png; sourceTree = "<group>"; };
+		51344185163659FE00755D23 /* vietnam_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vietnam_flag.png; path = Image/vietnam_flag.png; sourceTree = "<group>"; };
 		517028F41622B3ED00073249 /* charge_money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = charge_money.png; path = Image/charge_money.png; sourceTree = "<group>"; };
 		517028F71622B89E00073249 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clear.png; path = Image/clear.png; sourceTree = "<group>"; };
 		517029251622D3EE00073249 /* change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = change.png; path = Image/change.png; sourceTree = "<group>"; };
@@ -583,6 +587,7 @@
 				517028F71622B89E00073249 /* clear.png */,
 				51935D3C161C154E00B00697 /* del.png */,
 				517EEE5F161FD2AC00A61393 /* email.jpeg */,
+				51344184163659FE00755D23 /* english_flag.png */,
 				51935D3D161C154E00B00697 /* equal.jpeg */,
 				51935D3E161C154E00B00697 /* goback.ico */,
 				51935D3F161C154E00B00697 /* Help Support.png */,
@@ -597,6 +602,7 @@
 				51935D47161C154E00B00697 /* Sales History.png */,
 				51935D48161C154E00B00697 /* Signature.ico */,
 				51935D49161C154E00B00697 /* Tax.png */,
+				51344185163659FE00755D23 /* vietnam_flag.png */,
 				51214C99161AD2820052FE06 /* numberTable */,
 			);
 			name = Image;
@@ -834,6 +840,8 @@
 				28955588162F9A88007FFC12 /* AddCellIpad.xib in Resources */,
 				28955589162F9A88007FFC12 /* ItemCellIpad.xib in Resources */,
 				519051621630026E007C9129 /* database.sqlite in Resources */,
+				51344186163659FE00755D23 /* english_flag.png in Resources */,
+				51344187163659FE00755D23 /* vietnam_flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
