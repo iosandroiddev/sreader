@@ -182,8 +182,8 @@ bool bl_testEmail = FALSE;
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Sign Out"
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Sign Out", nil];
+                                               destructiveButtonTitle:@"Sign Out"
+                                                    otherButtonTitles:nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];
     

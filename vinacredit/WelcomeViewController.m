@@ -33,7 +33,7 @@
 
 - (void)viewDidUnload
 {    
-    addSignIn = nil;
+    
     [super viewDidUnload];
     //[self.navigationController setNavigationBarHidden:NO animated:YES];
     // Release any retained subviews of the main view.

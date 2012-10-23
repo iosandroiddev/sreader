@@ -10,7 +10,7 @@
 
 @interface InfoAccountViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     
-    IBOutlet UIBarButtonItem *barButtonWelcome;
+    
     IBOutlet UIBarButtonItem *barButtonSale;
     IBOutlet UIButton *btnImage;    
     IBOutlet UITextField *lastName;

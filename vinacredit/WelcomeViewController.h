@@ -10,7 +10,7 @@
 
 @interface WelcomeViewController : UIViewController {
     
-    IBOutlet UIButton *addSignIn;
+
 }
 
 - (IBAction)gotoSignIn:(id)sender;

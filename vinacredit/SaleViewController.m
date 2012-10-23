@@ -176,7 +176,7 @@ void checkStatus(OSStatus status)
         }
         return cus;
     }
-    }else {
+    } else {
         if(indexPath.row == [rowDataArray count]){
             CellIdentifier = @"AddCellIpad";
             AddCell *ad = (AddCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -424,7 +424,6 @@ void checkStatus(OSStatus status)
 
 - (IBAction)gotoAccount:(id)sender{
     [lib gotoInterFace:ACCOUNT pushView:TRUE navigationController:self.navigationController];
-
 //    labelSum.text = @"0";
 //    [self resetValueVariable];
 }
@@ -437,10 +436,8 @@ void checkStatus(OSStatus status)
             return;
     }    
 //    if(BUILD_DEVICE)
-//        [self getTimeAndPrice];
-    
+//        [self getTimeAndPrice];    
     [lib gotoInterFace:CHARGE pushView:TRUE navigationController:self.navigationController];
-
 //    labelSum.text = @"0";
 //    [self resetValueVariable];
 }
@@ -464,12 +461,10 @@ void checkStatus(OSStatus status)
         bTestEmpty = [labelSum.text isEqualToString:@"0"];
         if(bTestEmpty)
             return;
-    }    
-
+    }
 //    tmpLableSum = @"0";
 //    if(BUILD_DEVICE)
-//        [self getTimeAndPrice];
-    
+//        [self getTimeAndPrice];    
     [lib gotoInterFace:IDENTIFY pushView:TRUE navigationController:self.navigationController];
 }
 
@@ -480,6 +475,8 @@ void checkStatus(OSStatus status)
     dummyString = nil;
 }
 
+
+/******************************/
 #pragma receiver device audio
     // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)sreaderViewDidLoad {

@@ -138,7 +138,6 @@
 }
 
 - (void)viewDidUnload{
-    barButtonWelcome = nil;
     barButtonSale = nil;
     lastName = nil;
     firstName = nil;
