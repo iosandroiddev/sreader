@@ -104,6 +104,10 @@
     INFOR_CONFIRMPASS_LBL    =@"Confirm :";
 
     SALE_LBL                 =@"Sale";
+    SALE_TAKEPHOTO_LBL       =@"Take Photo";
+    SALE_CHOOSEPHOTO_LBL     =@"Choose Photo";
+    SALE_DELETEPHOTO_LBL     =@"Delete Photo";
+    SALE_CANCEL_LBL          =@"Cancel";
     
     CHARGE_LBL               =@"Charge";
     CHARGE_CASH_LBL          =@"Cash Payment";
@@ -127,6 +131,7 @@
     ACCOUNT_SALEHISTORY_LBL  =@"Sales History";
     ACCOUNT_TAX_LBL          =@"Tax";
     ACCOUNT_SUPPORT_LBL      =@"Support";
+    ACCOUNT_CANCEL_LBL       =@"Cancel";
     
     SALEHISTORY_LBL          =@"Sale History";
     

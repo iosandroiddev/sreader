@@ -62,11 +62,11 @@
         //img.image =
 }
 - (void)imageIdentify{
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Action Sheet"
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:SALE_TAKEPHOTO_LBL
                                                              delegate:self
-                                                    cancelButtonTitle:@"Cancel"
+                                                    cancelButtonTitle:SALE_CANCEL_LBL
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Take Photo",@"Choose Photo",@"Delete Photo", nil];
+                                                    otherButtonTitles:SALE_TAKEPHOTO_LBL,SALE_CHOOSEPHOTO_LBL,SALE_DELETEPHOTO_LBL, nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];
 }

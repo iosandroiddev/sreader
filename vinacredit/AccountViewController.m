@@ -181,10 +181,10 @@ bool bl_testEmail = FALSE;
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)gotoSignOut:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Sign Out"
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:ACCOUNT_RIGHT_BTN
                                                              delegate:self
-                                                    cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:@"Sign Out"
+                                                    cancelButtonTitle:ACCOUNT_CANCEL_LBL
+                                               destructiveButtonTitle:ACCOUNT_RIGHT_BTN
                                                     otherButtonTitles:nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];
