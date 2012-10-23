@@ -17,6 +17,8 @@
 }
 @property (strong, nonatomic) IBOutlet UITextField *emailUser;
 @property (strong, nonatomic) IBOutlet UILabel *lblTestEmail;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSkip;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSend;
 
 - (IBAction)buttonSkip:(id)sender;
 - (IBAction)buttonSend:(id)sender;

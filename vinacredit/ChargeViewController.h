@@ -17,6 +17,9 @@
     
     IBOutlet UILabel *lblSumPrice;
     IBOutlet UILabel *lblChangePrice;
+    
+    IBOutlet UILabel *lblCash;
+    
 }
 @property (strong, nonatomic) IBOutlet UILabel *priceItem;
 @property (strong, nonatomic) IBOutlet UIButton *buttonReceipt;
@@ -24,6 +27,7 @@
 @property (strong, nonatomic) Library *lib;
 @property (strong, nonatomic) IBOutlet UILabel *lblSumPrice;
 @property (strong, nonatomic) IBOutlet UILabel *lblChangePrice;
+@property (strong, nonatomic) IBOutlet UILabel *lblCash;
 - (IBAction)gotoSale:(id)sender;
 - (IBAction)gotoReceipt:(id)sender;
 

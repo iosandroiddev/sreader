@@ -20,6 +20,8 @@
 
 @implementation DoneViewController
 
+@synthesize lblThank;
+@synthesize buttonDone;
 @synthesize imageU;
 @synthesize lblSumPaid;
 @synthesize valueEmail;
@@ -30,7 +32,9 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     Library *lib = [[Library alloc]init];
     valueEmail = EMAIL_LOGIN_VALUE;
-    
+    [lib translate:LANGUAGE_BL];
+    lblThank.text = DONE_PAID_LBL;
+    [buttonDone setTitle:DONE_BTN forState:UIControlStateNormal];
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     
@@ -50,6 +54,9 @@
     [self setLblSumPaid:nil];
     imageU = nil;
     [self setImageU:nil];
+    lblThank = nil;
+    [self setLblThank:nil];
+    [self setButtonDone:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

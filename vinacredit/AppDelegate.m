@@ -74,7 +74,75 @@
     WELCOME_SIGNIN_BTN       = @"Sign In";// btn : button
     
     EMAIL_VINACREDIT_STR      = @"vinacredit@gmail.com";
+    
+    SIGNIN_LBL               =@"Sign In";
+    SIGNIN_CANCEL_BTN        =@"Cancel";
+    SIGNIN_BTN               =@"SignIn";
+    SIGNIN_FORGOT_BTN        =@"Forgot Password?";
+    SIGNIN_STATUS_LBL        =@"Login Status";
+    SIGNIN_EMAIL_TXT         =@"Email Address";
+    SIGNIN_PASS_TXT          =@"Password";
+    
+    WRONGPASS_LBL            =@"Wrong Pass";
+    WRONGPASS_EMAIL_TXT      =@"Email Address";
+    WRONGPASS_SEND_BTN       =@"Send";
+    WRONGPASS_RESULT_LBL     =@"Enter email again";
+    
+    INFOR_LBL                =@"Information";
+    INFOR_ENTER_LBL          =@"Enter Your Information";
+    INFOR_CONTINUE_BTN       =@"Continue";
+    INFOR_FIRSTNAME_TXT      =@"firstname";
+    INFOR_LASTNAME_TXT       =@"lastname";
+    INFOR_COMPANY_TXT        =@"company name";
+    INFOR_ADDRESS_TXT        =@"address";
+    INFOR_OLDPASS_TXT        =@"old password";
+    INFOR_NEWPASS_TXT        =@"at least 8 characters";
+    INFOR_CONFIRMPASS_TXT    =@"enter again ";
+    INFOR_EMAIL_LBL          =@"Email:";
+    INFOR_OLDPASS_LBL        =@"Old Pass:";
+    INFOR_NEWPASS_LBL        =@"Password:";
+    INFOR_CONFIRMPASS_LBL    =@"Confirm :";
 
+    SALE_LBL                 =@"Sale";
+    
+    CHARGE_LBL               =@"Charge";
+    CHARGE_CASH_LBL          =@"Cash Payment";
+    CHARGE_TENDER_BTN        =@"Tender Cash";
+    
+    RECEIPT_EMAIL_TXT        =@"Email Address";
+    RECEIPT_SKIP_BTN         =@"Skip";
+    RECEIPT_SEND_BTN         =@"Send";
+    
+    IDENTIFY_LBL             =@"Identify";
+    IDENTIFY_RIGHT_BTN       =@"Signature";
+    IDENTIFY_TEXT_LBL        =@"Image used to identify with Bank";
+    IDENTIFY_PIC_LBL         =@"picture";
+    IDENTIFY_TAKEPHOTO_BTN   =@"shooting";
+    
+    DONE_PAID_LBL            =@"paid, Thanks.";
+    DONE_BTN                 =@"Done";
+    
+    ACCOUNT_LBL              =@"Account";
+    ACCOUNT_RIGHT_BTN        =@"Sign Out";
+    ACCOUNT_SALEHISTORY_LBL  =@"Sales History";
+    ACCOUNT_TAX_LBL          =@"Tax";
+    ACCOUNT_SUPPORT_LBL      =@"Support";
+    
+    SALEHISTORY_LBL          =@"Sale History";
+    
+    DETAILSALE_LBL           =@"Detail Sale";
+    DETAILSALE_TOTAL_LBL     =@"Total:";
+    DETAILSALE_BILL_LBL      =@"Bill";
+    
+    TAX_LBL                  =@"Tax";
+    TAX_SALETAX_LBL          =@"Add Sale Tax";
+    TAX_TAXRATE_LBL          =@"Tax Rate";
+    TAX_TEXT_LBL             =@"Add a percentage to you payments to account for state taxes.";
+    
+    SUPPORT_LBL              =@"Support";
+    SUPPORT_VINA_LBL         =@"Vinacredit";
+    SUPPORT_HOTLINE_LBL      =@"Hotline";
+    SUPPORT_INSTRU_LBL       =@"Instructions";
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

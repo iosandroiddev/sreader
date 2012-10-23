@@ -20,6 +20,7 @@
 @synthesize image = _image;
 @synthesize totalLabel = _totalLabel;
 @synthesize mainTableView = _mainTableView;
+@synthesize lblTotal;
 @synthesize detail = _detail;
 @synthesize total;
 @synthesize date;
@@ -29,6 +30,7 @@
     [super viewDidAppear:NO];
     self.detail = [[ConnectDatabase database] bills:date email:email];
     Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
     [_totalLabel setText:[lib addDotNumber:total]];
     [self.mainTableView reloadData];
 }
@@ -41,7 +43,8 @@
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     if(acc.imageAcc != NULL)
         _image.image = acc.imageAcc;
-    self.title = @"Detail Sale";
+    self.title = DETAILSALE_LBL;
+    lblTotal.text = DETAILSALE_TOTAL_LBL;
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     // Do any additional setup after loading the view from its nib.
@@ -55,6 +58,8 @@
     [self setTotalLabel:nil];
     mainTableView = nil;
     [self setMainTableView:nil];
+    lblTotal = nil;
+    [self setLblTotal:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -94,7 +99,7 @@
     
     Library *lib = [[Library alloc] init];
     Bill *info = [_detail objectAtIndex:indexPath.row ];
-    cell.bill.text = [NSString stringWithFormat:@"Bill %d",[_detail count] - indexPath.row];
+    cell.bill.text = [NSString stringWithFormat:@"%@ %d",DETAILSALE_BILL_LBL,[_detail count] - indexPath.row];
     cell.time.text = info.timeSale;
     cell.sumItem.text = [lib addDotNumber:info.sumItem];
     return cell;

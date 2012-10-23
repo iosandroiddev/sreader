@@ -25,12 +25,18 @@
 @synthesize password;
 @synthesize confirmPass;
 @synthesize oldpass;
+@synthesize lblEmail;
+@synthesize lblOldpass;
+@synthesize lblPass;
+@synthesize lblConfirm;
+@synthesize lblInfor;
 @synthesize scrollView;
 @synthesize address;
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationItem setHidesBackButton:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
@@ -38,6 +44,23 @@
     scrollView.contentSize = CGSizeMake(SCROLLVIEW_CONTENT_WIDTH, SCROLLVIEW_CONTENT_HEIGHT);
 
 }
+
+- (void)translate{
+    self.title = INFOR_LBL;
+    firstName.placeholder = INFOR_FIRSTNAME_TXT;
+    lastName.placeholder = INFOR_LASTNAME_TXT;
+    companyName.placeholder = INFOR_COMPANY_TXT;
+    address.placeholder = INFOR_ADDRESS_TXT;
+    oldpass.placeholder = INFOR_OLDPASS_TXT;
+    password.placeholder = INFOR_NEWPASS_TXT;
+    confirmPass.placeholder = INFOR_CONFIRMPASS_TXT;
+    lblInfor.text = INFOR_ENTER_LBL;
+    lblEmail.text = INFOR_EMAIL_LBL;
+    lblOldpass.text = INFOR_OLDPASS_LBL;
+    lblPass.text = INFOR_NEWPASS_LBL;
+    lblConfirm.text = INFOR_CONFIRMPASS_LBL;    
+}
+
 
 -(void) keyboardDidShow: (NSNotification *)notif {
 	NSLog(@"Keyboard is visible");
@@ -120,9 +143,11 @@
     Library *lib = [[Library alloc]init];
     if([lib NotifyError]){
         [barButtonSale setEnabled:YES];
+        [addButtonItem setEnabled:YES];
         INFO.NOTIFY_ERROR_STR = @"update info success";
     } else {
         [barButtonSale setEnabled:NO];
+        [addButtonItem setEnabled:NO];
     }
     lblNotifyError.text = INFO.NOTIFY_ERROR_STR;
 	return YES;
@@ -134,6 +159,14 @@
     [super viewDidLoad];    
     keyboardVisible = NO;
     [barButtonSale setEnabled:NO];
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
+    [self translate];
+    
+    //create a right button
+    addButtonItem = [[UIBarButtonItem alloc] initWithTitle:INFOR_CONTINUE_BTN style:UIBarButtonItemStyleBordered target:self action:@selector(gotoSale:)];
+	self.navigationItem.rightBarButtonItem = addButtonItem;
+    [addButtonItem setEnabled:NO];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -159,6 +192,16 @@
     [self setBtnImage:nil];
     lblNotifyError = nil;
     [self setLblNotifyError:nil];
+    lblEmail = nil;
+    lblOldpass = nil;
+    lblPass = nil;
+    lblConfirm = nil;
+    lblInfor = nil;
+    [self setLblEmail:nil];
+    [self setLblOldpass:nil];
+    [self setLblPass:nil];
+    [self setLblConfirm:nil];
+    [self setLblInfor:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

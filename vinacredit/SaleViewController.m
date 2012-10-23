@@ -53,13 +53,38 @@ NSFileManager *filemanager;
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.navigationItem.hidesBackButton = YES;
 }
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
     
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+-(void)configureBar {
+    //create a right button
+    UIImage *imgright = [UIImage imageNamed:@"charge.png"];
+    UIButton *btnright = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnright setBackgroundImage:imgright forState:UIControlStateNormal];
+    btnright.frame= CGRectMake(0.0, 0.0, 30.0, 26.0);
+    [btnright addTarget:self action:@selector(gotoCharge:)    forControlEvents:UIControlEventTouchUpInside];
+    UIView *viewright = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 30.0, 26.0)];
+    [viewright addSubview:btnright];
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithCustomView:viewright];
+	self.navigationItem.rightBarButtonItem = rightButtonItem;
+    
+    //create an add left button
+    UIImage *imgleft = [UIImage imageNamed:@"account.png"];
+    UIButton *btnleft = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnleft setBackgroundImage:imgleft forState:UIControlStateNormal];
+    btnleft.frame= CGRectMake(0.0, 0.0, 26.0, 26.0);
+    UIView *viewleft = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 26.0, 26.0)];
+    [btnleft addTarget:self action:@selector(gotoAccount:)    forControlEvents:UIControlEventTouchUpInside];
+    [viewleft addSubview:btnleft];
+    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:viewleft];    
+	self.navigationItem.leftBarButtonItem = leftButtonItem;
+	self.navigationController.delegate = self;
 }
 
 void checkStatus(OSStatus status)
@@ -82,6 +107,10 @@ void checkStatus(OSStatus status)
     value = @"0";
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.rowDataArray = [[NSMutableArray alloc] init];
+    
+    [self configureBar];
+    [lib translate:LANGUAGE_BL];
+    self.title = SALE_LBL;
 }
 #pragma mark textfield delegate
 

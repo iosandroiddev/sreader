@@ -17,6 +17,8 @@ NSString* strSwitchControl;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Library *lib = [[Library alloc] init];
+    [lib translate:LANGUAGE_BL];
     swit = [[UISwitch alloc] initWithFrame:CGRectZero];
     [swit setOn:NO animated:NO];
     if(BUILD_IPHONE_OR_IPAD)
@@ -27,7 +29,7 @@ NSString* strSwitchControl;
     label.backgroundColor = [UIColor clearColor];    
     label.text = TAX_RATE_VALUE;
     
-    self.title = @"Tax";
+    self.title = TAX_LBL;
    
 }
 
@@ -58,7 +60,7 @@ NSString* strSwitchControl;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
 	
-	return @"Add a percentage to you payments to account for state taxes.";
+	return TAX_TEXT_LBL;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -70,7 +72,7 @@ NSString* strSwitchControl;
                                       reuseIdentifier:CellIdentifier];
 	}
     if(indexPath.row == 0){
-        cell.textLabel.text = @"Add Sale Tax";
+        cell.textLabel.text = TAX_SALETAX_LBL;
         cell.accessoryView = swit;
 
         if(!TAX_STATUS_VALUE)
@@ -80,7 +82,7 @@ NSString* strSwitchControl;
         
         [swit addTarget:self action:@selector(statusSwitchChanged:) forControlEvents:UIControlEventValueChanged];
     } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"Tax Rate";
+        cell.textLabel.text = TAX_TAXRATE_LBL;
         [cell addSubview:label];
             //[cell addSubview:image];
     }

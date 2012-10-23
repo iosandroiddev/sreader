@@ -22,11 +22,19 @@
     IBOutlet UITextField *confirmPass;    
     IBOutlet UITextField *oldpass;
     
+    IBOutlet UILabel *lblEmail;
+    IBOutlet UILabel *lblOldpass;
+    IBOutlet UILabel *lblPass;
+    IBOutlet UILabel *lblConfirm;
+    IBOutlet UILabel *lblInfor;    
+    
     IBOutlet UIScrollView *scrollView;
     BOOL keyboardVisible;
 	CGPoint offset;
 	UITextField *activeField;
     UIImagePickerController *imagePicker;
+    UIBarButtonItem *addButtonItem;
+    
     IBOutlet UILabel *lblNotifyError;
 }
 
@@ -40,6 +48,13 @@
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (strong, nonatomic) IBOutlet UITextField *confirmPass;
 @property (strong, nonatomic) IBOutlet UITextField *oldpass;
+
+@property (strong, nonatomic) IBOutlet UILabel *lblEmail;
+@property (strong, nonatomic) IBOutlet UILabel *lblOldpass;
+@property (strong, nonatomic) IBOutlet UILabel *lblPass;
+@property (strong, nonatomic) IBOutlet UILabel *lblConfirm;
+@property (strong, nonatomic) IBOutlet UILabel *lblInfor;
+
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 

@@ -23,13 +23,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
     NSString *valueEmail = EMAIL_LOGIN_VALUE;
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];
     if(acc.imageAcc != NULL)
         imageU.image = acc.imageAcc;
     self.itemInfos = [[ConnectDatabase database] sumBill:valueEmail];
-    self.title = @"Sale History";
+    self.title = SALEHISTORY_LBL;
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
     // Do any additional setup after loading the view from its nib.
 }

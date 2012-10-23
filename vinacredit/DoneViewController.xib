@@ -198,14 +198,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">buttonDone</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="97984947"/>
-					</object>
-					<int key="connectionID">8</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">lblSumPaid</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="119896996"/>
@@ -219,6 +211,22 @@
 						<reference key="destination" ref="210709883"/>
 					</object>
 					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblThank</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="359015363"/>
+					</object>
+					<int key="connectionID">22</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">buttonDone</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="97984947"/>
+					</object>
+					<int key="connectionID">23</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -304,7 +312,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -326,7 +334,7 @@
 						<string key="buttonDone">UIButton</string>
 						<string key="imageU">UIImageView</string>
 						<string key="lblSumPaid">UILabel</string>
-						<string key="priceDone">UILabel</string>
+						<string key="lblThank">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="buttonDone">
@@ -341,8 +349,8 @@
 							<string key="name">lblSumPaid</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="priceDone">
-							<string key="name">priceDone</string>
+						<object class="IBToOneOutletInfo" key="lblThank">
+							<string key="name">lblThank</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

@@ -16,6 +16,7 @@
 @synthesize lib;
 @synthesize lblSumPrice;
 @synthesize lblChangePrice;
+@synthesize lblCash;
 
 NSString *tmpPriceItem;
 NSString *tmpSumPrice;
@@ -24,12 +25,15 @@ NSString *strChange;
 - (void)viewDidLoad
 {
     //==========================
-    self.title = @"Charge";
+    self.title = CHARGE_LBL;
+    [buttonReceipt setTitle:CHARGE_TENDER_BTN forState:UIControlStateNormal];
+    lblCash.text = CHARGE_CASH_LBL;
     UIBarButtonItem *btnbackBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(pushBackButton:)];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = btnbackBar;
     //==========================
     lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     lblSumPrice.text = SALE_SUM_VALUE;
@@ -56,6 +60,8 @@ NSString *strChange;
     [self setLblSumPrice:nil];
     lblChangePrice = nil;
     [self setLblChangePrice:nil];
+    lblCash = nil;
+    [self setLblCash:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -13,15 +13,21 @@
 @implementation IdentifyViewController
 @synthesize img;
 @synthesize lblPictureIdentify;
+@synthesize lblText;
+@synthesize btnTakePhoto;
 @synthesize library;
 - (void)viewDidLoad
 {
-    
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
+    lblPictureIdentify.text = IDENTIFY_PIC_LBL;
+    lblText.text = IDENTIFY_TEXT_LBL;
+    [btnTakePhoto setTitle:IDENTIFY_TAKEPHOTO_BTN forState:UIControlStateNormal];
     //==========================
-    self.title = @"Identify";
+    self.title = IDENTIFY_LBL;
     //create an add right button
-    UIBarButtonItem *addleftButton = [[UIBarButtonItem alloc] initWithTitle:@"Signature" style:UIBarButtonItemStyleBordered target:self action:@selector(Signature:)];
-    self.navigationItem.rightBarButtonItem = addleftButton;	
+    UIBarButtonItem *addrightButton = [[UIBarButtonItem alloc] initWithTitle:IDENTIFY_RIGHT_BTN style:UIBarButtonItemStyleBordered target:self action:@selector(Signature:)];
+    self.navigationItem.rightBarButtonItem = addrightButton;	
 	self.navigationController.delegate = self;
     UIBarButtonItem *btnbackBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(pushBackButton:)];
     self.navigationItem.hidesBackButton = YES;
@@ -44,6 +50,10 @@
     self.library = nil;
     lblPictureIdentify = nil;
     [self setLblPictureIdentify:nil];
+    lblText = nil;
+    btnTakePhoto = nil;
+    [self setLblText:nil];
+    [self setBtnTakePhoto:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -11,14 +11,18 @@
 @interface IdentifyViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIActionSheetDelegate>{
     
 
+    IBOutlet UILabel *lblText;
     IBOutlet UILabel *lblPictureIdentify;
     IBOutlet UIImageView *img;
     UIImagePickerController *imagePicker;
+    IBOutlet UIButton *btnTakePhoto;
 }
 
 
 - (IBAction)takePhoto:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lblPictureIdentify;
+@property (strong, nonatomic) IBOutlet UILabel *lblText;
+@property (strong, nonatomic) IBOutlet UIButton *btnTakePhoto;
 @property (strong, atomic) ALAssetsLibrary* library;
 @property (strong, nonatomic) IBOutlet UIImageView *img;
 @end

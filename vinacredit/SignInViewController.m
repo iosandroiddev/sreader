@@ -14,6 +14,8 @@
 #import "Macros.h"
 #import "Library.h"
 @implementation SignInViewController
+@synthesize btnForgot;
+@synthesize btnCancel;
 @synthesize btnSale;
 @synthesize emailAddress;
 @synthesize password;
@@ -24,21 +26,26 @@ InfoAccountViewController *info;
 SaleViewController *sale;
 bool flagFirstLogin = true;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+- (void)translate{
+    self.title = SIGNIN_LBL;
+    emailAddress.placeholder = SIGNIN_EMAIL_TXT;
+    password.placeholder = SIGNIN_PASS_TXT;
+    [btnSale setTitle:SIGNIN_BTN forState:UIControlStateNormal];
+    [btnCancel setTitle:SIGNIN_CANCEL_BTN forState:UIControlStateNormal];
+    [btnForgot setTitle:SIGNIN_FORGOT_BTN forState:UIControlStateNormal];
+    
 }
-
 - (void)viewDidLoad
 {
     
     [emailAddress becomeFirstResponder];
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
+    [self translate];
     if (NO_TEST_SIGNIN)return;
     users = [[NSMutableArray alloc] init];
     NSURL *xmlURL = [NSURL URLWithString:@"https://sites.google.com/site/vinacreditdemo/home/user.xml"];
@@ -57,6 +64,10 @@ bool flagFirstLogin = true;
     [self setLblLoginStatus:nil];
     btnSale = nil;
     [self setBtnSale:nil];
+    btnCancel = nil;
+    btnForgot = nil;
+    [self setBtnCancel:nil];
+    [self setBtnForgot:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -68,8 +79,9 @@ bool flagFirstLogin = true;
 }
 
 - (IBAction)gotoWelcome:(id)sender {
-    Library *lib = [[Library alloc]init];
-    [lib gotoInterFace:WELCOME pushView:FALSE navigationController:self.navigationController];
+//    Library *lib = [[Library alloc]init];
+//    [lib gotoInterFace:WELCOME pushView:FALSE navigationController:self.navigationController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)myTask {
     // Do something usefull in here instead of sleeping ...

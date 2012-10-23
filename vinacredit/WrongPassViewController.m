@@ -14,13 +14,12 @@
 @synthesize btnSend;
 @synthesize lblResultEmail;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+- (void)translate{
+    self.title = WRONGPASS_LBL;
+    emailAddress.placeholder = WRONGPASS_EMAIL_TXT;
+    [btnSend setTitle:WRONGPASS_SEND_BTN forState:UIControlStateNormal];
+//    [lblResultEmail setText:WRONGPASS_RESULT_LBL];
+    
 }
 
 - (void)viewDidLoad
@@ -28,6 +27,10 @@
     
     [super viewDidLoad];
     [self focusFieldTest];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
+    [self translate];
     // Do any additional setup after loading the view from its nib.
 }
 

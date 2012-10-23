@@ -12,6 +12,9 @@
     IBOutlet UITextField *emailAddress;
     IBOutlet UITextField *password;
     IBOutlet UIButton *btnSale;
+    IBOutlet UIButton *btnCancel;
+    IBOutlet UIButton *btnForgot;
+    IBOutlet UILabel *lblLoginStatus;
     
     NSXMLParser *xmlParser;
     NSMutableArray *users;
@@ -20,8 +23,10 @@
     NSMutableString *currentPassword;
     NSString *currentElenment;
     MBProgressHUD *HUD;
-    IBOutlet UILabel *lblLoginStatus;
+    
 }
+@property (strong, nonatomic) IBOutlet UIButton *btnForgot;
+@property (strong, nonatomic) IBOutlet UIButton *btnCancel;
 @property (strong, nonatomic) IBOutlet UIButton *btnSale;
 @property (strong, nonatomic) IBOutlet UITextField *emailAddress;
 @property (strong, nonatomic) IBOutlet UITextField *password;

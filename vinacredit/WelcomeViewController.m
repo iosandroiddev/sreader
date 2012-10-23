@@ -36,19 +36,15 @@
     welcome_text.text = WELCOME_TEXT_LBL;
     [addSignIn setTitle:WELCOME_SIGNIN_BTN forState:UIControlStateNormal];
 }
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [super viewDidLoad];    
     // Do any additional setup after loading the view from its nib.
 }
 

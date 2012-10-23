@@ -15,6 +15,7 @@
     IBOutlet UIImageView *image;
     IBOutlet UILabel *totalLabel;
     IBOutlet UITableView *mainTableView;
+    IBOutlet UILabel *lblTotal;
     NSString *total;
 }
 
@@ -23,6 +24,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *totalLabel;
 @property (strong, nonatomic) IBOutlet UITableView *mainTableView;
+@property (strong, nonatomic) IBOutlet UILabel *lblTotal;
 
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSString *email;

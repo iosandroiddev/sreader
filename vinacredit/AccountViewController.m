@@ -49,7 +49,9 @@ bool bl_testEmail = FALSE;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
     NSString *valueEmail = EMAIL_LOGIN_VALUE;
     if(![valueEmail isEqualToString:@""])
         bl_testEmail = TRUE;
@@ -60,15 +62,15 @@ bool bl_testEmail = FALSE;
         imageUser.image = acc.imageAcc;
     email.text = acc.email;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    AccountViewController *list1 = [[AccountViewController alloc] initWithTitle:@"Sales History" image:[UIImage imageNamed:@"Sales History.png"]];
-    AccountViewController *list2 = [[AccountViewController alloc] initWithTitle:@"Tax" image:[UIImage imageNamed:@"Tax.png"]];
-    AccountViewController *list3 = [[AccountViewController alloc] initWithTitle:@"Support" image:[UIImage imageNamed:@"Help Support.png"]];
+    AccountViewController *list1 = [[AccountViewController alloc] initWithTitle:ACCOUNT_SALEHISTORY_LBL image:[UIImage imageNamed:@"Sales History.png"]];
+    AccountViewController *list2 = [[AccountViewController alloc] initWithTitle:ACCOUNT_TAX_LBL image:[UIImage imageNamed:@"Tax.png"]];
+    AccountViewController *list3 = [[AccountViewController alloc] initWithTitle:ACCOUNT_SUPPORT_LBL image:[UIImage imageNamed:@"Help Support.png"]];
     accountList  = [NSMutableArray arrayWithObjects:list1, list2, list3, nil];
     
-    self.navigationItem.title = @"Account";
+    self.navigationItem.title = ACCOUNT_LBL;
     
     //create a right button
-    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign out" style:UIBarButtonItemStyleBordered target:self action:@selector(gotoSignOut:)];
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithTitle:ACCOUNT_RIGHT_BTN style:UIBarButtonItemStyleBordered target:self action:@selector(gotoSignOut:)];
 	self.navigationItem.rightBarButtonItem = addButtonItem;
     
     //create an add left button

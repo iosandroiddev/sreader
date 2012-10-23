@@ -36,7 +36,7 @@
     priceLabel.text = [priceLabel.text stringByAppendingString:@" VND"];
     
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
     [self drawSquiggly:nil];
 }
 

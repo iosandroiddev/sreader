@@ -13,6 +13,8 @@
 @implementation ReceiptViewController
 @synthesize emailUser;
 @synthesize lblTestEmail;
+@synthesize buttonSkip;
+@synthesize buttonSend;
 
 
 - (void)viewDidLoad
@@ -24,6 +26,10 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [emailUser becomeFirstResponder];
     [super viewDidLoad];
+    
+    emailUser.placeholder = RECEIPT_EMAIL_TXT;
+    [buttonSkip setTitle:RECEIPT_SKIP_BTN forState:UIControlStateNormal];
+    [buttonSend setTitle:RECEIPT_SEND_BTN forState:UIControlStateNormal];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,6 +42,8 @@
     [self setEmailUser:nil];
     lbltestEmail = nil;
     [self setLblTestEmail:nil];
+    [self setButtonSkip:nil];
+    [self setButtonSend:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

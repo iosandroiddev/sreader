@@ -18,19 +18,16 @@
 @synthesize gotoVinacredit;
 @synthesize gotoNumber;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Support";
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
+    self.title = SUPPORT_LBL;
+    [gotoInstruc setTitle:SUPPORT_INSTRU_LBL forState:UIControlStateNormal];
+    [gotoNumber setTitle:SUPPORT_HOTLINE_LBL forState:UIControlStateNormal];
+    [gotoVinacredit setTitle:SUPPORT_VINA_LBL forState:UIControlStateNormal];
     // Do any additional setup after loading the view from its nib.
 }
 

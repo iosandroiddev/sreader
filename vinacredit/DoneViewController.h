@@ -14,9 +14,12 @@
     IBOutlet UIButton *buttonDone;
     IBOutlet UIImageView *imageU;
     IBOutlet UILabel *lblSumPaid;
+    IBOutlet UILabel *lblThank;
     
     
 }
+@property (strong, nonatomic) IBOutlet UILabel *lblThank;
+@property (strong, nonatomic) IBOutlet UIButton *buttonDone;
 @property (strong, nonatomic) IBOutlet UIImageView *imageU;
 @property (strong, nonatomic) IBOutlet UILabel *lblSumPaid;
 
