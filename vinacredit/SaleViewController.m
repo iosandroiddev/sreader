@@ -109,7 +109,6 @@ void checkStatus(OSStatus status)
     self.rowDataArray = [[NSMutableArray alloc] init];
     
     [self configureBar];
-    [lib translate:LANGUAGE_BL];
     self.title = SALE_LBL;
 }
 #pragma mark textfield delegate

@@ -25,8 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     red = 0.0/255.0;
     green = 0.0/255.0;
     blue = 0.0/255.0;

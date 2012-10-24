@@ -17,8 +17,6 @@ NSString* strSwitchControl;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc] init];
-    [lib translate:LANGUAGE_BL];
     swit = [[UISwitch alloc] initWithFrame:CGRectZero];
     [swit setOn:NO animated:NO];
     if(BUILD_IPHONE_OR_IPAD)

@@ -30,7 +30,6 @@
     [super viewDidAppear:NO];
     self.detail = [[ConnectDatabase database] bills:date email:email];
     Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     [_totalLabel setText:[lib addDotNumber:total]];
     [self.mainTableView reloadData];
 }

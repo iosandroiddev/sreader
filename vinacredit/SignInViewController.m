@@ -43,8 +43,6 @@ bool flagFirstLogin = true;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     [self translate];
     if (NO_TEST_SIGNIN)return;
     users = [[NSMutableArray alloc] init];

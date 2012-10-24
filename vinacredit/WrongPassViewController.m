@@ -28,8 +28,6 @@
     [super viewDidLoad];
     [self focusFieldTest];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     [self translate];
     // Do any additional setup after loading the view from its nib.
 }

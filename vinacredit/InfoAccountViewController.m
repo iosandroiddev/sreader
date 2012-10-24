@@ -159,8 +159,6 @@
     [super viewDidLoad];    
     keyboardVisible = NO;
     [barButtonSale setEnabled:NO];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     [self translate];
     
     //create a right button

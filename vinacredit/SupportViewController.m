@@ -22,8 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     self.title = SUPPORT_LBL;
     [gotoInstruc setTitle:SUPPORT_INSTRU_LBL forState:UIControlStateNormal];
     [gotoNumber setTitle:SUPPORT_HOTLINE_LBL forState:UIControlStateNormal];

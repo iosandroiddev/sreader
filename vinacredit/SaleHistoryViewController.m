@@ -23,8 +23,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     NSString *valueEmail = EMAIL_LOGIN_VALUE;
     Account *acc = [[Account alloc] init];
     acc = [[ConnectDatabase database] selectAcc:valueEmail];

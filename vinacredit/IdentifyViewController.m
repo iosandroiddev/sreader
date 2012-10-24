@@ -16,10 +16,10 @@
 @synthesize lblText;
 @synthesize btnTakePhoto;
 @synthesize library;
+
+
 - (void)viewDidLoad
 {
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     lblPictureIdentify.text = IDENTIFY_PIC_LBL;
     lblText.text = IDENTIFY_TEXT_LBL;
     [btnTakePhoto setTitle:IDENTIFY_TAKEPHOTO_BTN forState:UIControlStateNormal];

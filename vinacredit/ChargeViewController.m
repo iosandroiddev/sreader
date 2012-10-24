@@ -33,7 +33,6 @@ NSString *strChange;
     self.navigationItem.leftBarButtonItem = btnbackBar;
     //==========================
     lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     lblSumPrice.text = SALE_SUM_VALUE;

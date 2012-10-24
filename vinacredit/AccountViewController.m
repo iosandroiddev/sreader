@@ -33,6 +33,8 @@
 @synthesize accountList;
 
 bool bl_testEmail = FALSE;
+
+
 -(id)initWithTitle:(NSString *)t image:(UIImage *)i{
     if((self = [super init])){
         self.title = t;
@@ -47,11 +49,27 @@ bool bl_testEmail = FALSE;
     [self.tableView reloadData];
 }
 
+-(void)configureBar {
+    
+    self.navigationItem.title = ACCOUNT_LBL;
+    
+    //create a right button
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithTitle:ACCOUNT_RIGHT_BTN style:UIBarButtonItemStyleBordered target:self action:@selector(gotoSignOut:)];
+	self.navigationItem.rightBarButtonItem = addButtonItem;
+    
+    //create an add left button
+    UIBarButtonItem *btnbackBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(gotoSaleView:)];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = btnbackBar;
+	
+	self.navigationController.delegate = self;
+    
+}
+
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     NSString *valueEmail = EMAIL_LOGIN_VALUE;
     if(![valueEmail isEqualToString:@""])
         bl_testEmail = TRUE;
@@ -66,19 +84,7 @@ bool bl_testEmail = FALSE;
     AccountViewController *list2 = [[AccountViewController alloc] initWithTitle:ACCOUNT_TAX_LBL image:[UIImage imageNamed:@"Tax.png"]];
     AccountViewController *list3 = [[AccountViewController alloc] initWithTitle:ACCOUNT_SUPPORT_LBL image:[UIImage imageNamed:@"Help Support.png"]];
     accountList  = [NSMutableArray arrayWithObjects:list1, list2, list3, nil];
-    
-    self.navigationItem.title = ACCOUNT_LBL;
-    
-    //create a right button
-    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithTitle:ACCOUNT_RIGHT_BTN style:UIBarButtonItemStyleBordered target:self action:@selector(gotoSignOut:)];
-	self.navigationItem.rightBarButtonItem = addButtonItem;
-    
-    //create an add left button
-    UIBarButtonItem *btnbackBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(gotoSaleView:)];
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.leftBarButtonItem = btnbackBar;
-	
-	self.navigationController.delegate = self;
+    [self configureBar];
      
 }
 

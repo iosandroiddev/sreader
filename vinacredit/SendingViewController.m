@@ -19,8 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Library *lib = [[Library alloc]init];
-    [lib translate:LANGUAGE_BL];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.title = SEND_LBL;
     //create a right button

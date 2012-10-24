@@ -32,7 +32,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     Library *lib = [[Library alloc]init];
     valueEmail = EMAIL_LOGIN_VALUE;
-    [lib translate:LANGUAGE_BL];
     lblThank.text = DONE_PAID_LBL;
     [buttonDone setTitle:DONE_BTN forState:UIControlStateNormal];
     Account *acc = [[Account alloc] init];
