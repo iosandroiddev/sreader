@@ -200,7 +200,6 @@
 						<string key="NSFrame">{{514, 850}, {254, 110}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -692,6 +691,22 @@
 					<int key="connectionID">85</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblCash</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="506884653"/>
+					</object>
+					<int key="connectionID">86</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">buttonReceipt</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="392642853"/>
+					</object>
+					<int key="connectionID">87</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">gotoReceipt:</string>
 						<reference key="source" ref="392642853"/>
@@ -1013,7 +1028,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">85</int>
+			<int key="maxID">87</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1046,6 +1061,7 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="buttonReceipt">UIButton</string>
+						<string key="lblCash">UILabel</string>
 						<string key="lblChangePrice">UILabel</string>
 						<string key="lblSumPrice">UILabel</string>
 						<string key="priceItem">UILabel</string>
@@ -1054,6 +1070,10 @@
 						<object class="IBToOneOutletInfo" key="buttonReceipt">
 							<string key="name">buttonReceipt</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="lblCash">
+							<string key="name">lblCash</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="lblChangePrice">
 							<string key="name">lblChangePrice</string>

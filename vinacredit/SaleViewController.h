@@ -22,6 +22,7 @@
 
 @interface SaleViewController : UIViewController <UINavigationControllerDelegate, UINavigationBarDelegate, UITableViewDataSource,UITableViewDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,UIActionSheetDelegate,AddCellDelegate,Customized1CellDelegate>{
     
+    IBOutlet UIButton *swipe_card_btn;
     IBOutlet UIView *firstView;
     IBOutlet UIView *secondView;
     IBOutlet UIImageView *imageItem;
@@ -41,6 +42,7 @@
     NSString *m_strLog;
     IBOutlet UIImageView *imgSreader;
 }
+@property (strong, nonatomic) IBOutlet UIButton *swipe_card_btn;
 @property (strong, nonatomic) IBOutlet UIImageView *imgSreader;
 @property (strong, nonatomic) IBOutlet UILabel *labelSum;
 @property (strong, nonatomic) IBOutlet UIButton *takeIdentifed;

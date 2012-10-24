@@ -63,11 +63,11 @@
     Library *lib = [[Library alloc]init];
     BOOL tmp = [lib testEmail:emailUser.text];
     if(tmp){        
-        lbltestEmail.text = @"You check email.";
+        lbltestEmail.text = RECEIPT_RESULT_TRUE_LBL;
         lbltestEmail.textColor = [UIColor blueColor];
     }
     else{
-        lbltestEmail.text = @"wrong email !";
+        lbltestEmail.text = RECEIPT_RESULT_FALSE_LBL;
         lbltestEmail.textColor = [UIColor redColor];
         return;
     }

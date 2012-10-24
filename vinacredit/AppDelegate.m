@@ -73,87 +73,94 @@
     WELCOME_TEXT_LBL         = @"Free credit card reader Take your first payment today Nightly deposits to your bank";
     WELCOME_SIGNIN_BTN       = @"Sign In";// btn : button
     
-    EMAIL_VINACREDIT_STR      = @"vinacredit@gmail.com";
+    EMAIL_VINACREDIT_STR     = @"vinacredit@gmail.com";
     
-    SIGNIN_LBL               =@"Sign In";
-    SIGNIN_CANCEL_BTN        =@"Cancel";
-    SIGNIN_BTN               =@"SignIn";
-    SIGNIN_FORGOT_BTN        =@"Forgot Password?";
-    SIGNIN_STATUS_LBL        =@"Login Status";
-    SIGNIN_EMAIL_TXT         =@"Email Address";
-    SIGNIN_PASS_TXT          =@"Password";
-    
-    WRONGPASS_LBL            =@"Wrong Pass";
-    WRONGPASS_EMAIL_TXT      =@"Email Address";
-    WRONGPASS_SEND_BTN       =@"Send";
-    WRONGPASS_RESULT_LBL     =@"Enter email again";
-    
-    INFOR_LBL                =@"Information";
-    INFOR_ENTER_LBL          =@"Enter Your Information";
-    INFOR_CONTINUE_BTN       =@"Continue";
-    INFOR_FIRSTNAME_TXT      =@"firstname";
-    INFOR_LASTNAME_TXT       =@"lastname";
-    INFOR_COMPANY_TXT        =@"company name";
-    INFOR_ADDRESS_TXT        =@"address";
-    INFOR_OLDPASS_TXT        =@"old password";
-    INFOR_NEWPASS_TXT        =@"at least 8 characters";
-    INFOR_CONFIRMPASS_TXT    =@"enter again ";
-    INFOR_EMAIL_LBL          =@"Email:";
-    INFOR_OLDPASS_LBL        =@"Old Pass:";
-    INFOR_NEWPASS_LBL        =@"Password:";
-    INFOR_CONFIRMPASS_LBL    =@"Confirm :";
+    SIGNIN_LBL               = @"Sign In";
+    SIGNIN_CANCEL_BTN        = @"Cancel";
+    SIGNIN_BTN               = @"SignIn";
+    SIGNIN_FORGOT_BTN        = @"Forgot Password?";
+    SIGNIN_STATUS_LBL        = @"Login Status";
+    SIGNIN_EMAIL_TXT         = @"Email Address";
+    SIGNIN_PASS_TXT          = @"Password";
+    SIGNIN_RESULT_LOGIN_TRUE_LBL        = @"Login Successful!!";
+    SIGNIN_RESULT_LOGIN_FALSE_LBL       = @"login failed !";
 
-    SALE_LBL                 =@"Sale";
-    SALE_TAKEPHOTO_LBL       =@"Take Photo";
-    SALE_CHOOSEPHOTO_LBL     =@"Choose Photo";
-    SALE_DELETEPHOTO_LBL     =@"Delete Photo";
-    SALE_CANCEL_LBL          =@"Cancel";
     
-    CHARGE_LBL               =@"Charge";
-    CHARGE_CASH_LBL          =@"Cash Payment";
-    CHARGE_TENDER_BTN        =@"Tender Cash";
+    WRONGPASS_LBL            = @"Wrong Pass";
+    WRONGPASS_EMAIL_TXT      = @"Email Address";
+    WRONGPASS_SEND_BTN       = @"Send";
+    WRONGPASS_RESULT_LBL     = @"Enter email again";
     
-    RECEIPT_EMAIL_TXT        =@"Email Address";
-    RECEIPT_SKIP_BTN         =@"Skip";
-    RECEIPT_SEND_BTN         =@"Send";
+    INFOR_LBL                = @"Information";
+    INFOR_ENTER_LBL          = @"Enter Your Information";
+    INFOR_CONTINUE_BTN       = @"Continue";
+    INFOR_FIRSTNAME_TXT      = @"firstname";
+    INFOR_LASTNAME_TXT       = @"lastname";
+    INFOR_COMPANY_TXT        = @"company name";
+    INFOR_ADDRESS_TXT        = @"address";
+    INFOR_OLDPASS_TXT        = @"old password";
+    INFOR_NEWPASS_TXT        = @"at least 8 characters";
+    INFOR_CONFIRMPASS_TXT    = @"enter again ";
+    INFOR_EMAIL_LBL          = @"Email:";
+    INFOR_OLDPASS_LBL        = @"Old Pass:";
+    INFOR_NEWPASS_LBL        = @"Password:";
+    INFOR_CONFIRMPASS_LBL    = @"Confirm :";
+ 
+    SALE_LBL                 = @"Sale";
+    SALE_TAKEPHOTO_LBL       = @"Take Photo";
+    SALE_CHOOSEPHOTO_LBL     = @"Choose Photo";
+    SALE_DELETEPHOTO_LBL     = @"Delete Photo";
+    SALE_CANCEL_LBL          = @"Cancel";
+    SALE_SWIPE_CARD          = @"Swipe Card";
     
-    SIGNATURE_RIGHT_BTN      =@"Next";
-    SIGNTURE_CLEAR_BTN       =@"Clear";
-    SIGNATURE_TEXT_LBL       =@"I agree to pay the amount above according to my card issues agreement";
+    CHARGE_LBL               = @"Charge";
+    CHARGE_CASH_LBL          = @"Cash Payment";
+    CHARGE_TENDER_BTN        = @"Tender Cash";
     
-    SEND_LBL                 =@"Sending";
+    RECEIPT_EMAIL_TXT        = @"Email Address";
+    RECEIPT_SKIP_BTN         = @"Skip";
+    RECEIPT_SEND_BTN         = @"Send";
+    RECEIPT_RESULT_TRUE_LBL  = @"You check email.";
+    RECEIPT_RESULT_FALSE_LBL = @"wrong email !";
+
     
-    IDENTIFY_LBL             =@"Identify";
-    IDENTIFY_RIGHT_BTN       =@"Signature";
-    IDENTIFY_TEXT_LBL        =@"Image used to identify with Bank";
-    IDENTIFY_PIC_LBL         =@"picture";
-    IDENTIFY_TAKEPHOTO_BTN   =@"shooting";
+    SIGNATURE_RIGHT_BTN      = @"Next";
+    SIGNTURE_CLEAR_BTN       = @"Clear";
+    SIGNATURE_TEXT_LBL       = @"I agree to pay the amount above according to my card issues agreement";
     
-    DONE_PAID_LBL            =@"paid, Thanks.";
-    DONE_BTN                 =@"Done";
+    SEND_LBL                 = @"Sending";
     
-    ACCOUNT_LBL              =@"Account";
-    ACCOUNT_RIGHT_BTN        =@"Sign Out";
-    ACCOUNT_SALEHISTORY_LBL  =@"Sales History";
-    ACCOUNT_TAX_LBL          =@"Tax";
-    ACCOUNT_SUPPORT_LBL      =@"Support";
-    ACCOUNT_CANCEL_LBL       =@"Cancel";
+    IDENTIFY_LBL             = @"Identify";
+    IDENTIFY_RIGHT_BTN       = @"Signature";
+    IDENTIFY_TEXT_LBL        = @"Image used to identify with Bank";
+    IDENTIFY_PIC_LBL         = @"picture";
+    IDENTIFY_TAKEPHOTO_BTN   = @"shooting";
     
-    SALEHISTORY_LBL          =@"Sale History";
+    DONE_PAID_LBL            = @"paid, Thanks.";
+    DONE_BTN                 = @"Done";
     
-    DETAILSALE_LBL           =@"Detail Sale";
-    DETAILSALE_TOTAL_LBL     =@"Total:";
-    DETAILSALE_BILL_LBL      =@"Bill";
+    ACCOUNT_LBL              = @"Account";
+    ACCOUNT_RIGHT_BTN        = @"Sign Out";
+    ACCOUNT_SALEHISTORY_LBL  = @"Sales History";
+    ACCOUNT_TAX_LBL          = @"Tax";
+    ACCOUNT_SUPPORT_LBL      = @"Support";
+    ACCOUNT_CANCEL_LBL       = @"Cancel";
     
-    TAX_LBL                  =@"Tax";
-    TAX_SALETAX_LBL          =@"Add Sale Tax";
-    TAX_TAXRATE_LBL          =@"Tax Rate";
-    TAX_TEXT_LBL             =@"Add a percentage to you payments to account for state taxes.";
+    SALEHISTORY_LBL          = @"Sale History";
     
-    SUPPORT_LBL              =@"Support";
-    SUPPORT_VINA_LBL         =@"Vinacredit";
-    SUPPORT_HOTLINE_LBL      =@"Hotline";
-    SUPPORT_INSTRU_LBL       =@"Instructions";
+    DETAILSALE_LBL           = @"Detail Sale";
+    DETAILSALE_TOTAL_LBL     = @"Total:";
+    DETAILSALE_BILL_LBL      = @"Bill";
+    
+    TAX_LBL                  = @"Tax";
+    TAX_SALETAX_LBL          = @"Add Sale Tax";
+    TAX_TAXRATE_LBL          = @"Tax Rate";
+    TAX_TEXT_LBL             = @"Add a percentage to you payments to account for state taxes.";
+    
+    SUPPORT_LBL              = @"Support";
+    SUPPORT_VINA_LBL         = @"Vinacredit";
+    SUPPORT_HOTLINE_LBL      = @"Hotline";
+    SUPPORT_INSTRU_LBL       = @"Instructions";
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

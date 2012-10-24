@@ -34,6 +34,7 @@ SaleViewController* THIS = NULL;
 
 @implementation SaleViewController
 
+@synthesize swipe_card_btn;
 @synthesize imgSreader;
 @synthesize labelSum;
 @synthesize takeIdentifed;
@@ -109,7 +110,11 @@ void checkStatus(OSStatus status)
     self.rowDataArray = [[NSMutableArray alloc] init];
     
     [self configureBar];
+    [self translate];
+}
+- (void)translate{
     self.title = SALE_LBL;
+    [swipe_card_btn setTitle:SALE_SWIPE_CARD forState:UIControlStateNormal];
 }
 #pragma mark textfield delegate
 
@@ -133,6 +138,8 @@ void checkStatus(OSStatus status)
     [self setLabelSum:nil];
     imgSreader = nil;
     [self setImgSreader:nil];
+    swipe_card_btn = nil;
+    [self setSwipe_card_btn:nil];
     [super viewDidUnload];
 }
 

@@ -33,7 +33,7 @@ bool flagFirstLogin = true;
     [btnSale setTitle:SIGNIN_BTN forState:UIControlStateNormal];
     [btnCancel setTitle:SIGNIN_CANCEL_BTN forState:UIControlStateNormal];
     [btnForgot setTitle:SIGNIN_FORGOT_BTN forState:UIControlStateNormal];
-    
+    lblLoginStatus.text = SIGNIN_STATUS_LBL;
 }
 - (void)viewDidLoad
 {
@@ -147,19 +147,19 @@ bool flagFirstLogin = true;
         psswrd=[psswrd stringByReplacingOccurrencesOfString:@"\n" withString:@""];
         psswrd=[psswrd stringByReplacingOccurrencesOfString:@"\t" withString:@""];
         psswrd=[psswrd stringByReplacingOccurrencesOfString:@" " withString:@""];
+        
         if([mutableEmail isEqualToString:[emailAddress text]]&&[psswrd isEqualToString:[password text]]){
-            [lblLoginStatus setText:@"Login Successful!!"];
+            [lblLoginStatus setText:SIGNIN_RESULT_LOGIN_TRUE_LBL];
             if(DEBUG_SCR)
                 NSLog(@"flag %c",flagFirstSignIn);
             if(flagFirstSignIn)
                 [self.navigationController pushViewController:info animated:YES];
             else
-                [self.navigationController pushViewController:sale animated:YES];
-            
+                [self.navigationController pushViewController:sale animated:YES];            
             return;
         }
-    }
-    [lblLoginStatus setText:@"login failed !"];
+    }    
+    [lblLoginStatus setText:SIGNIN_RESULT_LOGIN_FALSE_LBL];
     return;
 
 }
