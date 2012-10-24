@@ -121,6 +121,8 @@
     SIGNTURE_CLEAR_BTN       =@"Clear";
     SIGNATURE_TEXT_LBL       =@"I agree to pay the amount above according to my card issues agreement";
     
+    SEND_LBL                 =@"Sending";
+    
     IDENTIFY_LBL             =@"Identify";
     IDENTIFY_RIGHT_BTN       =@"Signature";
     IDENTIFY_TEXT_LBL        =@"Image used to identify with Bank";

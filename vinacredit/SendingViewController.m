@@ -15,19 +15,22 @@
 
 @implementation SendingViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.title = SEND_LBL;
+    //create a right button
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Email" style:UIBarButtonItemStyleBordered target:self action:@selector(gotoReceipt:)];
+	self.navigationItem.rightBarButtonItem = addButtonItem;
+    
+    //create an add left button
+    UIBarButtonItem *btnbackBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(gotoSignature:)];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = btnbackBar;
     // Do any additional setup after loading the view from its nib.
 }
 
