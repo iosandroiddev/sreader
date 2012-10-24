@@ -27,7 +27,14 @@
     UIPanGestureRecognizer *panGestureRecognizer;
     FreeformLineDrawer *freeformLineDrawer;
 
+    IBOutlet UILabel *lblText;
+    IBOutlet UIButton *btnClear;
+    IBOutlet UIBarButtonItem *btnBar;
+    
 }
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnBar;
+@property (strong, nonatomic) IBOutlet UIButton *btnClear;
+@property (strong, nonatomic) IBOutlet UILabel *lblText;
 @property (strong, atomic) ALAssetsLibrary* library;
 @property (strong, nonatomic) IBOutlet UIImageView *drawImage;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;

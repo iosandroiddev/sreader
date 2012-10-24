@@ -55,6 +55,7 @@
 		28E4F5F615DE218C00E1DCD8 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E4F5F415DE218C00E1DCD8 /* AccountViewController.xib */; };
 		28E66C00160069E30048D37F /* TaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E66BFE160069E30048D37F /* TaxViewController.m */; };
 		28E66C01160069E30048D37F /* TaxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E66BFF160069E30048D37F /* TaxViewController.xib */; };
+		28FB38D51637793D00B62A2E /* SignatureViewControllerVietNam.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FB38D41637793D00B62A2E /* SignatureViewControllerVietNam.xib */; };
 		510B37A016315E6A00EB9CAC /* CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */; };
 		510B37A41631640700EB9CAC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510B37A2163163F900EB9CAC /* AssetsLibrary.framework */; };
 		512606FC162409BF00DB489B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512606FA1624097E00DB489B /* CoreData.framework */; };
@@ -208,6 +209,7 @@
 		28E66BFD160069E30048D37F /* TaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxViewController.h; sourceTree = "<group>"; };
 		28E66BFE160069E30048D37F /* TaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxViewController.m; sourceTree = "<group>"; };
 		28E66BFF160069E30048D37F /* TaxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxViewController.xib; sourceTree = "<group>"; };
+		28FB38D41637793D00B62A2E /* SignatureViewControllerVietNam.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignatureViewControllerVietNam.xib; sourceTree = "<group>"; };
 		510B379E16315E6A00EB9CAC /* CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPhotoAlbum.h; path = resource/CustomPhotoAlbum.h; sourceTree = "<group>"; };
 		510B379F16315E6A00EB9CAC /* CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPhotoAlbum.m; path = resource/CustomPhotoAlbum.m; sourceTree = "<group>"; };
 		510B37A2163163F900EB9CAC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -495,6 +497,7 @@
 				28E4F5B515DDF80E00E1DCD8 /* SignatureViewController.h */,
 				28E4F5B615DDF80E00E1DCD8 /* SignatureViewController.m */,
 				28E4F5B715DDF80E00E1DCD8 /* SignatureViewController.xib */,
+				28FB38D41637793D00B62A2E /* SignatureViewControllerVietNam.xib */,
 			);
 			name = Signature;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				519051621630026E007C9129 /* database.sqlite in Resources */,
 				51344186163659FE00755D23 /* english_flag.png in Resources */,
 				51344187163659FE00755D23 /* vietnam_flag.png in Resources */,
+				28FB38D51637793D00B62A2E /* SignatureViewControllerVietNam.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

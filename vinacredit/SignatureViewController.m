@@ -14,6 +14,9 @@
 
 @implementation SignatureViewController
 
+@synthesize btnBar;
+@synthesize btnClear;
+@synthesize lblText;
 @synthesize library;
 @synthesize drawImage;
 @synthesize priceLabel;
@@ -22,6 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Library *lib = [[Library alloc]init];
+    [lib translate:LANGUAGE_BL];
     red = 0.0/255.0;
     green = 0.0/255.0;
     blue = 0.0/255.0;
@@ -31,7 +36,9 @@
         //self.drawImage.transform = CGAffineTransformMakeRotation(180*M_PI/180);
     
     self.library = [[ALAssetsLibrary alloc] init];
-    
+    lblText.text = SIGNATURE_TEXT_LBL;
+    [btnClear setTitle:SIGNTURE_CLEAR_BTN forState:UIControlStateNormal];
+    [btnBar setTitle:SIGNATURE_RIGHT_BTN];
     priceLabel.text = SALE_SUM_VALUE;
     priceLabel.text = [priceLabel.text stringByAppendingString:@" VND"];
     
@@ -44,6 +51,12 @@
     [self setDrawImage:nil];
     [self setPriceLabel:nil];
     self.library = nil;
+    lblText = nil;
+    btnClear = nil;
+    btnBar = nil;
+    [self setBtnBar:nil];
+    [self setBtnClear:nil];
+    [self setLblText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
